@@ -1,11 +1,15 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Header from "./Componentes/Header";
+import Rutas from './Componentes/Rutas'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hola Mundo</h1>
-    </div>
+    <>
+      <Rutas />
+      {/* <Header/>  */}
+      
+    </>
   );
 }
 
