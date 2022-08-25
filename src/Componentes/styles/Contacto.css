@@ -1,0 +1,129 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#contacto{
+    width: 50%;
+    display: flex;
+    margin-left: 300px;
+}
+.solapa{
+    width: 200px;
+    height: 110px;
+    background: url('../../img/background-solapa-roja.png') center bottom;
+    text-align: center;
+    margin: auto;
+    margin-top: -16px;
+    justify-content: center;
+    font-weight: 200;
+}
+.solapa h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    display: block;
+    line-height: 90px;
+    font-weight: 600;
+}
+.solapa-roja{
+    background: url('../../img/background-solapa-roja.png')bottom center !important;
+    background-repeat: no-repeat;
+}
+.br-25{
+    width: 100%;
+    height: 25px;
+}
+.acenter{
+    text-align: center;
+}
+.acenter h3{
+    font-size: 24px;
+    color: #DD161B;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.mail h2{
+    font-size: 10px;
+}
+.mail a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #623A31;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+form{
+    background: #EFE3D0;
+    max-width: 450px;
+    padding: 40px 20px 10px 20px;
+    box-sizing: border-box;
+    margin: auto;
+    -webkit-border-top-left-radius: 12px;
+    -webkit-border-top-right-radius: 12px;
+    -moz-border-radius-topleft: 12px;
+    -moz-border-radius-topright: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-right: 80px;
+}
+.form-control{
+    border: none;
+    background: #DCC299;
+    height: 36px;
+    width: 99%;
+    font-family: 'Bitter', serif;
+    color: #623A31;
+    margin-top: 10px;
+}
+.formulario-label{
+    float: left;
+    width: 50%;
+    line-height: 36px;
+    font-size: 14px;
+}
+.formulario-area{
+    background: #DCC299;
+    width: 90%;
+    float: right;
+    height: 130px;
+    margin-bottom: 20px;
+    position: relative;
+    margin-right: 120px;
+}
+textarea{
+    border: none;
+    background: #DCC299;
+    height: 130px;
+    width: 410px;
+    font-family: 'Bitter', serif;
+    color: #623A31;
+}
+.btn{
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    background: #DD161B;
+    height: 46px;
+    margin-left: 150px;
+    padding: 0px 15px;
+    color: #fff;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

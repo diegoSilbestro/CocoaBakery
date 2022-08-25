@@ -4,6 +4,7 @@ export const NavbarWrapper = styled.nav`
   
 
   .navContainer{
+    overflow:hidden;
   }
   .logo{
     display:flex;
@@ -15,7 +16,6 @@ export const NavbarWrapper = styled.nav`
     margin-top: 0px;
   }
   .nav{
-    
     list-style:none;
     display: flex;
     flex-direction: column;
@@ -49,11 +49,13 @@ export const NavbarWrapper = styled.nav`
     
     .navContainer{
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
+    margin-left:10px;
+    margin-right:680px;
     align-items:center;
     align-content: center;
     height:100px;
-    width:100vw;
+    width:100%;
   }
     .nav{
       display: flex;
