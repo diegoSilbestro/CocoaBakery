@@ -38,7 +38,6 @@ function ProductosSinTacc() {
                             <li>Brownie</li>
                             <li>Tiramisú</li>
                             <li>Chesscake</li>
-                            <li>Tarta de Manzana</li>
                         </ul>
                     </div>
                 </div>

@@ -38,8 +38,6 @@ function ProductosTradicional() {
                             <li>Macarons</li>
                             <li>Chocotorta</li>
                             <li>Facturas</li>
-                            <li>Torta Balcarce</li>
-                            <li>Lemon Pie</li>
                         </ul>
                     </div>
                 </div>

@@ -34,11 +34,10 @@ function ProductosSinAzucar() {
                     <div class="card-body">
                         <h5 class="card-title">Sin azucar</h5>
                         <ul class="card-text">
-                            <li>Yogurt </li>
+                            <li>Mousse de Yogurt </li>
                             <li>Mousse de chocolate</li>
                             <li>Carrot cake</li>
                             <li>Devil cake</li>
-                            <li>Torta de Ricota</li>
                         </ul>
                     </div>
                 </div>

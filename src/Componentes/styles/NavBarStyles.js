@@ -5,6 +5,7 @@ export const NavbarWrapper = styled.nav`
 
   .navContainer{
     overflow:hidden;
+    background-color:#e29c9c;
   }
   .logo{
     display:flex;
@@ -22,7 +23,6 @@ export const NavbarWrapper = styled.nav`
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    background: #DABFBF;
     position: fixed;
     top: 8.5vh;
     right: ${props => (props.open ? "0" : "-100%")};
@@ -51,7 +51,7 @@ export const NavbarWrapper = styled.nav`
     display: flex;
     justify-content:space-between;
     margin-left:10px;
-    margin-right:680px;
+    margin-right:530px;
     align-items:center;
     align-content: center;
     height:100px;
@@ -64,7 +64,6 @@ export const NavbarWrapper = styled.nav`
       right:0;
       height: 3rem;
       border-radius: 10px;
-      background-color: #DABFBF;
       flex-direction: row;
       justify-content: center;
       align-items: center;
