@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import style from "./styles/Tienda-productos.css"
 
 const ItemCount = ({ stock, initial }) => {
     const [count, setCount] = useState(initial);
@@ -12,11 +13,11 @@ const ItemCount = ({ stock, initial }) => {
         }
     }
     return (
-        <>
-            <button onClick={handleSubtract} disabled={count === 0}>-</button>
+        <div style={style}>
+            <button className='btn-count' onClick={handleSubtract} disabled={count === 0}>-</button>
             <span>{count}</span>
-            <button onClick={onAdd}>+</button>
-        </>
+            <button className='btn-count' onClick={onAdd}>+</button>
+        </div>
     )
 }
 
