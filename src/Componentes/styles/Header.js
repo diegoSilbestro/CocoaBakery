@@ -12,6 +12,6 @@ export const HeaderWrapper = styled.header`
   img{
     margin-top: 3.5rem;
   }
-  
+ 
   
 `;

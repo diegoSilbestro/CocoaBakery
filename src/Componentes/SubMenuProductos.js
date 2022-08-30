@@ -51,7 +51,7 @@ const StyledMenu = styled((props) => (
     },
 }));
 
-export default function SubMenu({titulo}) {
+export default function SubMenu({titulo, handleCloseHamb}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -59,6 +59,7 @@ export default function SubMenu({titulo}) {
     };
     const handleClose = () => {
         setAnchorEl(null);
+        handleCloseHamb();
     };
 
     return (
@@ -86,7 +87,7 @@ export default function SubMenu({titulo}) {
             >
                 <MenuItem onClick={handleClose} disableRipple>
                     <CakeIcon />
-                    <NavLink to="/ProductosSinTacc" activeClassName="active" className='subMenu'>Sin TACC</NavLink>
+                    <NavLink to="/ProductosSinTacc" activeClassName="active" className='subMenu' >Sin TACC</NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />

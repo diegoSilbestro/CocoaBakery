@@ -53,7 +53,7 @@ const StyledMenu = styled((props) => (
     },
 }));
 
-export default function SubMenu({titulo}) {
+export default function SubMenu({titulo, handleCloseHamb}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -61,6 +61,7 @@ export default function SubMenu({titulo}) {
     };
     const handleClose = () => {
         setAnchorEl(null);
+        handleCloseHamb();
     };
 
     return (

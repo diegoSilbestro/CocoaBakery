@@ -12,11 +12,8 @@ function Header() {
 
   return (
     <HeaderWrapper>
-      {/* <a href="#home">
-        img src={require('../img/LogoCocoaBakery (1).png')}></img>
-      </a> */}
-      <Navbar open={open} />
-      <MenuButton open={open} handleClick={handleClick} />
+      <Navbar open={open} handleClick={handleClick}/>
+      <MenuButton open={open} handleClick={handleClick} className='hamburgBtn' />
     </HeaderWrapper>
   );
 }

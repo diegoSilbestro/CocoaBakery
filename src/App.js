@@ -1,14 +1,12 @@
 import React from 'react'
 import './App.css';
-import Header from "./Componentes/Header";
 import Rutas from './Componentes/Rutas'
+import PaginaInicio from './Componentes/PaginaInicio';
 
 function App() {
   return (
     <>
       <Rutas />
-      {/* <Header/>  */}
-      
     </>
   );
 }

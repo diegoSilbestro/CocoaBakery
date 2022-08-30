@@ -1,7 +1,12 @@
+import './styles/Contacto.css'
+
 
 function Contacto() {
-   return ( <h1>Contacto</h1> );
-}
+   return (
+      <div className='footer'>
+         <h1>Contacto</h1> 
+      </div>
+   )}
 
 export default Contacto;
 

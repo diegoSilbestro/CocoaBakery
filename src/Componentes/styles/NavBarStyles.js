@@ -45,7 +45,7 @@ export const NavbarWrapper = styled.nav`
     
   }
 
-  @media only screen and (min-width: 624px) {
+  @media only screen and (min-width: 665px) {
     
     .navContainer{
     display: flex;
@@ -83,7 +83,7 @@ export const NavbarWrapper = styled.nav`
     
   }
 
-  @media (min-width: 624px) and (max-width: 800px){
+  @media (min-width: 665px) and (max-width: 800px){
     .logo{
       display:none;
     }
