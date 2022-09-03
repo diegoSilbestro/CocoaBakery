@@ -5,7 +5,7 @@ import { Carousel } from 'react-bootstrap';
 function ProductosTradicional() {
     return (
         <>
-        <h1>Productos tradicionales</h1>
+        <h1>Productos Tradicionales</h1>
         <div className='container-card2' style={styles}>
                 <div class="card">
                     <Carousel>
@@ -38,8 +38,6 @@ function ProductosTradicional() {
                             <li>Macarons</li>
                             <li>Chocotorta</li>
                             <li>Facturas</li>
-                            <li>Torta Balcarce</li>
-                            <li>Lemon Pie</li>
                         </ul>
                     </div>
                 </div>

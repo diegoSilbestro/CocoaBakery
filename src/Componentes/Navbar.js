@@ -14,7 +14,7 @@ function Navbar({ open }) {
                
           <ul className="nav">
             <li className="nav1"><NavButton  titulo={<NavLink to="/" className='navBtn' >Inicio</NavLink>}/></li>
-            <li className="nav2"><SubMenuProductos className='navBtn' style={{backgroundColor: 'red'}} titulo='Productos' /></li>
+            <li className="nav2"><SubMenuProductos className='navBtn'  titulo='Productos' /></li>
             <li className="nav3"><SubMenuTienda className='navBtn' titulo='Tienda' /></li>
             <li className="nav4"><NavButton titulo={<NavLink to="/Contacto" className='navBtn' >Contacto</NavLink>} /></li>
           </ul>

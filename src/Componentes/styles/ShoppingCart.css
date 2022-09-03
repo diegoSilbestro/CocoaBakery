@@ -1,0 +1,22 @@
+.box{
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #c38888;
+}
+
+.grid-responsive {
+ display: grid;
+ grid-template-columns: repeat (auto-fit, minmax(200px,1fr ));
+}
+
+.product{
+    padding: 1rem;
+    background-color: aliceblue;
+    color: #cf3d3d;
+}
+
+.cart-item{
+    background-color: #c38888;
+    padding: 1rem;
+    color: aliceblue;
+}
