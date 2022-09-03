@@ -2,13 +2,13 @@ import React from 'react';
 import styles from '../styles/Productos.css'
 import Carousel from 'react-bootstrap/Carousel';
 
-function ProductosSinAzucar() {
+function productosSinAzucar() {
     return (
         <>
-            <h1>Productos sin azucar</h1>
+            <h1>Productos sin Azúcar</h1>
             <div className='container-card2' style={styles}>
                 <div class="card">
-                    <Carousel>
+                    <Carousel className="carousel" >
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
@@ -32,12 +32,12 @@ function ProductosSinAzucar() {
                         </Carousel.Item>
                     </Carousel>
                     <div class="card-body">
-                        <h5 class="card-title">Sin azucar</h5>
+                        <h5 class="card-title">Sin Azúcar</h5>
                         <ul class="card-text">
-                            <li>Mousse de Yogurt </li>
+                            <li >Mousse de Yogurt </li>
                             <li>Mousse de chocolate</li>
-                            <li>Carrot cake</li>
-                            <li>Devil cake</li>
+                            <li>Carrot Cake</li>
+                            <li>Devil Cake</li>
                         </ul>
                     </div>
                 </div>
@@ -46,4 +46,4 @@ function ProductosSinAzucar() {
     );
 }
 
-export default ProductosSinAzucar;
+export default productosSinAzucar;

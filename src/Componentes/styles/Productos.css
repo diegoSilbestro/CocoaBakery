@@ -1,8 +1,15 @@
 h5{
     font-size: 35px;
 }
+h1{
+    font-weight: bolder;
+    margin-top: 40px;
+}
+
 .card{
+    margin-top: 230px;
     max-width: 540px;
+    border: none;
 }
 
 .img-card{
@@ -19,19 +26,18 @@ h5{
 .container-card .card{
     width: 800px !important;
     margin: 50px;
-    margin-left: 120px;
+    margin-left: 250px;
 }
 .container-card .card .img-column{
     height: 250px;
 }
 .container-card2{
-    margin-top: 30px;
     margin-left: 250px;
 }
 .container-card2 .card{
     max-width: 550px !important;
     height: 300px;
-    margin-left: 120px;
+    margin-left: 150px;
 }
 .container-card2 .card .img1{
     width: 400px;

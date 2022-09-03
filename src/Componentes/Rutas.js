@@ -10,18 +10,18 @@ import TiendaTradicional from './Tienda/TiendaTradicional';
 import Contacto from './Contacto';
 import Header from './Header'
 
-const Rutas = () => {
+const Rutas = ({productItems,productItem,products}) => {
     return (
         <Router>
             <Header/>
             <Routes>
                 <Route path="/" element= {<Inicio />} />
-                <Route path="/ProductosSinTacc" element= {<ProductosSinTacc />} />
+                <Route path="/ProductosSinTacc" element= {<ProductosSinTacc   />} />
                 <Route path="/ProductosSinAzucar" element= {<ProductosSinAzucar />} />
                 <Route path="/ProductosTradicional" element= {<ProductosTradicional />} />
-                <Route path="/TiendaSinTACC" element= {<TiendaSinTACC />} />
-                <Route path="/TiendaSinAzucar" element= {<TiendaSinAzucar />} />
-                <Route path="/TiendaTradicional" element= {<TiendaTradicional />} />
+                <Route path="/TiendaSinTACC" element= {<TiendaSinTACC productItems={productItems}  />} />
+                <Route path="/TiendaSinAzucar" element= {<TiendaSinAzucar productItem={productItem} />} />
+                <Route path="/TiendaTradicional" element= {<TiendaTradicional products={products} />} />
                 <Route path="/Contacto" element= {<Contacto />} />
             </Routes>
         </Router>

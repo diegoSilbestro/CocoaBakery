@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/Productos.css'
 import Carousel from 'react-bootstrap/Carousel';
 
-function ProductosSinTacc() {
+function productosSinTacc() {
     return (
         <>
             <h1>Productos sin TACC</h1>
@@ -32,12 +32,12 @@ function ProductosSinTacc() {
                         </Carousel.Item>
                     </Carousel>
                     <div class="card-body">
-                        <h5 class="card-title">Sin Tacc</h5>
+                        <h5 class="card-title">Sin TACC</h5>
                         <ul class="card-text">
                             <li>Lemon Pie</li>
                             <li>Brownie</li>
                             <li>Tiramisú</li>
-                            <li>Chesscake</li>
+                            <li>Cheescake</li>
                         </ul>
                     </div>
                 </div>
@@ -45,4 +45,4 @@ function ProductosSinTacc() {
         </>);
 }
 
-export default ProductosSinTacc;
+export default productosSinTacc;
