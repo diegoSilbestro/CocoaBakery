@@ -5,8 +5,9 @@
 }
 
 .grid-responsive {
- display: grid;
- grid-template-columns: repeat (auto-fit, minmax(200px,1fr ));
+display:grid;
+grid-template-columns: repeat(4, 1fr);
+align-content: center;
 }
 
 .product{

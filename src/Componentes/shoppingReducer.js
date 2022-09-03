@@ -7,7 +7,7 @@ export const shoppingInitialState = {
     { id: 3, nombre: "carrot Cake", precio: 550 },
     { id: 4, nombre: "Devil Cake", precio: 600 }
   ],
-  cart: []
+  cart: [ ]
 }
 
 
