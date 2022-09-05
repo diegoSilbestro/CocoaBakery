@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemCount from '../Count';
 import '../styles/Tienda-productos.css'
 
 function TiendaTradicional({ products }) {
@@ -17,7 +16,6 @@ function TiendaTradicional({ products }) {
                                     <div className="card-body">
                                         <h5 className="card-title">{products.name}</h5>
                                         <p className="card-text">{products.description}</p>
-                                        <ItemCount stock={20} initial={1} />
                                         <h6>${products.price}</h6>
                                         <button class="myButton">Comprar</button>
                                     </div>

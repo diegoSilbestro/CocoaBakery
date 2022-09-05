@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemCount from '../Count';
 import '../styles/Tienda-productos.css'
 
 function TiendaSinTACC({ productItems }) {
@@ -16,7 +15,6 @@ function TiendaSinTACC({ productItems }) {
                                 <div className="card-body">
                                     <h5 className="card-title">{productItems.name}</h5>
                                     <p className="card-text">{productItems.description}</p>
-                                    <ItemCount stock={20} initial={1} />
                                     <h6>${productItems.price}</h6>
                                     <button class="myButton">Comprar</button>
                                 </div>
