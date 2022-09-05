@@ -14,7 +14,7 @@ export const NavbarWrapper = styled.nav`
     width:70%;
     margin-top: 0px;
   }
-  .nav{
+  .nav1{
     
     list-style:none;
     display: flex;
@@ -32,16 +32,17 @@ export const NavbarWrapper = styled.nav`
   }
  
 
-  .nav li{
+  .nav1 li{
     margin-top: 2rem;
   }
 
-  .nav li a:hover{
+  .nav1 li a:hover{
     font-weight:bold;
+    color: white;
   }
 
   
-  .nav li:hover >ul{
+  .nav1 li:hover >ul{
     
   }
 
@@ -55,7 +56,7 @@ export const NavbarWrapper = styled.nav`
     height:100px;
     width:100vw;
   }
-    .nav{
+    .nav1{
       display: flex;
       position: relative;
       top:0px;
@@ -71,11 +72,11 @@ export const NavbarWrapper = styled.nav`
       width: fit-content;
     }
 
-    .nav > li{
+    .nav1 > li{
       float: left;
     }
     
-    .nav li{
+    .nav1 li{
       padding-right: 2rem;
       margin:0;
     }

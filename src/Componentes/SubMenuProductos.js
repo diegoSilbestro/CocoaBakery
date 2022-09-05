@@ -87,15 +87,15 @@ export default function SubMenu({titulo, handleCloseHamb}) {
             >
                 <MenuItem onClick={handleClose} disableRipple>
                     <CakeIcon />
-                    <NavLink to="/ProductosSinTacc" activeClassName="active" className='subMenu' >Sin TACC</NavLink>
+                    <a href='/#ProductosSinTACC' className='subMenu'>Sin TACC </a>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <NavLink to="/ProductosSinAzucar" activeClassName="active" className='subMenu'>Sin azucar</NavLink>
+                <a href='/#ProductosSinAzucar' className='subMenu'>Sin azucar </a>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <NavLink to="/ProductosTradicional" activeClassName="active" className='subMenu'>Tradicional</NavLink>
+                <a href='/#ProductosTradicional' className='subMenu'>Tradicional </a>
                 </MenuItem>
             </StyledMenu>
         </div>

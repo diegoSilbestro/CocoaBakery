@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: #C38888;
+}
+#home{
+    width: 100%;
+}
+.carousel-inner{
+    height: 400px;
+    background-size: contain;
+}
+#img{
+    height: 500px;
+    background-size: contain;
+}

@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css';
-import Rutas from './Componentes/Rutas'
-import PaginaInicio from './Componentes/PaginaInicio';
+import Rutas from './Componentes/Rutas';
 
 function App() {
   return (
