@@ -4,7 +4,6 @@ export const NavbarWrapper = styled.nav`
   
 
   .navContainer{
-    overflow:hidden;
   }
   .logo{
     display:flex;
@@ -15,7 +14,8 @@ export const NavbarWrapper = styled.nav`
     width:70%;
     margin-top: 0px;
   }
-  .nav{
+  .nav1{
+    
     list-style:none;
     display: flex;
     flex-direction: column;
@@ -32,32 +32,31 @@ export const NavbarWrapper = styled.nav`
   }
  
 
-  .nav li{
+  .nav1 li{
     margin-top: 2rem;
   }
 
-  .nav li a:hover{
+  .nav1 li a:hover{
     font-weight:bold;
+    color: white;
   }
 
   
-  .nav li:hover >ul{
+  .nav1 li:hover >ul{
     
   }
 
-  @media only screen and (min-width: 624px) {
+  @media only screen and (min-width: 665px) {
     
     .navContainer{
     display: flex;
-    justify-content:space-between;
-    margin-left:10px;
-    margin-right:680px;
+    justify-content:space-around;
     align-items:center;
     align-content: center;
     height:100px;
-    width:100%;
+    width:100vw;
   }
-    .nav{
+    .nav1{
       display: flex;
       position: relative;
       top:0px;
@@ -73,11 +72,11 @@ export const NavbarWrapper = styled.nav`
       width: fit-content;
     }
 
-    .nav > li{
+    .nav1 > li{
       float: left;
     }
     
-    .nav li{
+    .nav1 li{
       padding-right: 2rem;
       margin:0;
     }
@@ -85,7 +84,7 @@ export const NavbarWrapper = styled.nav`
     
   }
 
-  @media (min-width: 624px) and (max-width: 800px){
+  @media (min-width: 665px) and (max-width: 800px){
     .logo{
       display:none;
     }

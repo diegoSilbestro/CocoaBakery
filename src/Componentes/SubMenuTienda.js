@@ -1,8 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import EditIcon from '@mui/icons-material/Edit';
+import ArchiveIcon from '@mui/icons-material/Archive';
+import FileCopyIcon from '@mui/icons-material/FileCopy';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CakeIcon from '@mui/icons-material/Cake';
 import {  NavLink } from "react-router-dom"
@@ -50,7 +53,7 @@ const StyledMenu = styled((props) => (
     },
 }));
 
-export default function SubMenu({titulo}) {
+export default function SubMenu({titulo, handleCloseHamb}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -58,6 +61,7 @@ export default function SubMenu({titulo}) {
     };
     const handleClose = () => {
         setAnchorEl(null);
+        handleCloseHamb();
     };
 
     return (
@@ -85,15 +89,15 @@ export default function SubMenu({titulo}) {
             >
                 <MenuItem onClick={handleClose} disableRipple>
                     <CakeIcon />
-                    <NavLink to="/TiendaSinTACC" activeClassName="active" className='subMenu'>Sin TACC</NavLink>
+                    <a href='/Tienda#TiendaSinTACC' className='subMenu'>Sin TACC</a>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <NavLink to="/TiendaSinAzucar" activeClassName="active" className='subMenu'>Sin azucar</NavLink>
+                <a href='/Tienda#TiendaSinAzucar' className='subMenu'>Sin azucar</a>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <NavLink to="/TiendaTradicional" activeClassName="active" className='subMenu'>Tradicional</NavLink>
+                <a href='/Tienda#TiendaTradicional' className='subMenu'>Tradicional</a>
                 </MenuItem>
             </StyledMenu>
         </div>

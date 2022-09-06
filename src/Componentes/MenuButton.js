@@ -4,10 +4,10 @@ import styled from "styled-components";
 const MenuButtonWrapper = styled.button`
   border: none;
   box-shadow: 0px 0px 1px rgb(50, 50, 50);
-  margin-top: 1.3rem;
+  margin-top: 0rem;
   margin-right: 1rem;
 
-  @media only screen and (min-width: 624px) {
+  @media only screen and (min-width: 665px) {
     display: none;
   }
 `;
@@ -37,3 +37,7 @@ function MenuButton({ open, handleClick }) {
 }
 
 export default MenuButton;
+
+
+
+
