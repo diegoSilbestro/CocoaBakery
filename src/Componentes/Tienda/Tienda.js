@@ -5,16 +5,20 @@ import TiendaTradicional from './TiendaTradicional'
 import Contacto from "../Contacto";
 import Header from '../Header';
 
-const Tienda = () => {
+
+const Tienda = ({productItems,productItem,products}) => {
+
     return (
         <>
             <div  >
                 <Header />
             </div>
             <div>
-                <TiendaSinTACC />
-                <TiendaSinAzucar />
-                <TiendaTradicional />
+
+                <TiendaSinTACC productItems={productItems} />
+                <TiendaSinAzucar productItem={productItem} />
+                <TiendaTradicional products={products} />
+
                 <Contacto />
             </div>
         </>
