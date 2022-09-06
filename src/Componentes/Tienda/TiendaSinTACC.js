@@ -1,3 +1,4 @@
+
 import React from 'react';
 import '../styles/Tienda-productos.css'
 
@@ -27,6 +28,7 @@ function TiendaSinTACC({ productItems }) {
             })}
         </div>
     );
+
 }
 
 export default TiendaSinTACC;

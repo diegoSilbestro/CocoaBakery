@@ -1,3 +1,4 @@
+
 import React from 'react';
 import '../styles/Tienda-productos.css'
 
@@ -28,6 +29,7 @@ function TiendaTradicional({ products }) {
             }
         </>
     );
+
 }
 
 export default TiendaTradicional;
