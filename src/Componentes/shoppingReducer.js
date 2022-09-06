@@ -5,7 +5,6 @@ export const shoppingInitialState = {
   cart: [ ]
 }
 
-
 export function shoppingReducer(state, action) {
   switch (action.type) {
 
