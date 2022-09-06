@@ -6,6 +6,7 @@ const MenuButtonWrapper = styled.button`
   box-shadow: 0px 0px 1px rgb(50, 50, 50);
   margin-top: 0rem;
   margin-right: 1rem;
+
   @media only screen and (min-width: 665px) {
     display: none;
   }
@@ -36,3 +37,7 @@ function MenuButton({ open, handleClick }) {
 }
 
 export default MenuButton;
+
+
+
+

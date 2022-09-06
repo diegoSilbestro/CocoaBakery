@@ -1,11 +1,53 @@
-.navBtn{
+.navContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBtn {
     background-color: #d85d30;
-    padding: 5px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
     text-decoration: none;
+    margin: 0 auto;
 }
-a:hover{
+
+a:hover {
     text-shadow: 2px 2px 1px #111;
+
+}
+
+ul .css-106c1u2-MuiBadge-badge {
+    background-color: #d85d30;
+}
+
+.ulCart {
+    display: none;
+}
+
+.headerCart {
+    position: fixed;
+    right: 6rem;
+}
+
+.headerCart .css-106c1u2-MuiBadge-badge{
+    background-color: #d85d30;
+}
+
+.css-fvc8ir-MuiBadge-badge{
+    background-color: #d85d30;
+    color: white;
+}
+
+
+@media only screen and (min-width: 665px) {
+    .headerCart {
+        display: none;
+    }
+
+    .ulCart {
+        display: flex;
+    }
 }

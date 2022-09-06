@@ -1,6 +1,7 @@
 import { TYPES } from './Actions/shoppingActions'
 
 export const shoppingInitialState = {
+
   productos: [ ],
   cart: [ ]
 }
@@ -71,4 +72,5 @@ export function shoppingReducer(state, action) {
     default:
       return state;
   }
+
 }

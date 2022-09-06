@@ -29,10 +29,12 @@ export const NavbarWrapper = styled.nav`
     height: 90vh;
     transition: right 0.3s linear;
   }
- 
+
+
   .nav1 li{
     margin-top: 2rem;
   }
+
   .nav1 li a:hover{
     font-weight:bold;
     color: white;
@@ -41,6 +43,7 @@ export const NavbarWrapper = styled.nav`
   .nav1 li:hover >ul{
     
   }
+
   @media only screen and (min-width: 665px) {
     
     .navContainer{
@@ -66,6 +69,7 @@ export const NavbarWrapper = styled.nav`
       font-size: 1.5rem;
       width: fit-content;
     }
+
     .nav1 > li{
       float: left;
     }
@@ -73,10 +77,9 @@ export const NavbarWrapper = styled.nav`
     .nav1 li{
       padding-right: 2rem;
       margin:0;
-    }
-    
-    
+    } 
   }
+
   @media (min-width: 665px) and (max-width: 800px){
     .logo{
       display:none;
