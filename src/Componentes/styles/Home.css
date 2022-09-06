@@ -13,6 +13,7 @@ h1{
 .carousel-inner{
     height: 400px;
     background-size: contain;
+    width: 100%;
 }
 #img{
     height: 500px;

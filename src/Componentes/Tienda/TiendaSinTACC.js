@@ -2,6 +2,7 @@
 import React from 'react';
 import '../styles/Tienda-productos.css'
 
+
 function TiendaSinTACC({ productItems }) {
     return (
         <div>

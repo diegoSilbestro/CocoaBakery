@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const NavbarWrapper = styled.nav`
   
-
   .navContainer{
   }
   .logo{
@@ -30,7 +29,7 @@ export const NavbarWrapper = styled.nav`
     height: 90vh;
     transition: right 0.3s linear;
   }
- 
+
 
   .nav1 li{
     margin-top: 2rem;
@@ -40,7 +39,6 @@ export const NavbarWrapper = styled.nav`
     font-weight:bold;
     color: white;
   }
-
   
   .nav1 li:hover >ul{
     
@@ -79,9 +77,7 @@ export const NavbarWrapper = styled.nav`
     .nav1 li{
       padding-right: 2rem;
       margin:0;
-    }
-    
-    
+    } 
   }
 
   @media (min-width: 665px) and (max-width: 800px){
@@ -89,6 +85,5 @@ export const NavbarWrapper = styled.nav`
       display:none;
     }
   }
-
   
 `;

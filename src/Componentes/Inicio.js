@@ -10,6 +10,7 @@ import Home from './Home'
 
 function Inicio() {
     return (
+
         <div >
             <div  >
                 <Header />

@@ -1,4 +1,6 @@
+
 import React, { useEffect } from 'react'
+
 import { TYPES } from './Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from './shoppingReducer'
 import { useReducer } from 'react'
@@ -20,11 +22,13 @@ const ShoppingCart = () => {
         const resCart = await axios.get(cartURL);
         const newProduct = await resProducts.data
         const newCartItem = await resCart.data
-        dispatch({ type: TYPES.READ_STATE, payload: [newProduct, newCartItem] })
-    }
-    useEffect(() => {
+        
+        dispatch({type: TYPES.READ_STATE, payload: [newProduct, newCartItem]})
+        }
+        useEffect(() => {
         updateState()
-    }, [])
+        }, [])
+
 
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
@@ -39,7 +43,9 @@ const ShoppingCart = () => {
 
     return (
         <>
-            <h2 className="">Carrito de Compras</h2>
+
+            <h2 className= "">Carrito de Compras</h2>
+
             <h3>Productos </h3>
             <div className="grid-responsive">
                 {
@@ -50,12 +56,14 @@ const ShoppingCart = () => {
             <div className="box">
                 {cart.map((item, index) => (
                     <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
-                ))}
+
+                ) )}
+
             </div>
             <button onClick={cleanCart}>Limpiar Carrito</button>
         </>
     )
 }
 
-
 export default ShoppingCart
+

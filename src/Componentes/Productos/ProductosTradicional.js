@@ -6,6 +6,7 @@ function ProductosTradicional() {
     return (
         
         <>
+
         <h1 id='ProductosTradicional'>Productos tradicionales</h1>
         <div className='container-card2' style={styles}>
                 <div class="card">

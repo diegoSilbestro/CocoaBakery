@@ -3,8 +3,8 @@ import { NavbarWrapper } from "./styles/NavBarStyles";
 import SubMenuProductos from "./SubMenuProductos";
 import SubMenuTienda from "./SubMenuTienda";
 import NavButton from "./NavButton";
-
 import { NavLink } from "react-router-dom"
+
 
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -28,8 +28,6 @@ function Navbar({ open, handleClick }) {
               </Badge>
             </IconButton>
           </NavLink>
-
-
         </div>
 
         <ul className="nav1" >
@@ -47,6 +45,7 @@ function Navbar({ open, handleClick }) {
                 </Badge>
               </IconButton>
             </NavLink>
+
 
 
           </li>
