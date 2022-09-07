@@ -50,4 +50,4 @@ function ProductosSinAzucar() {
     );
 }
 
-export default productosSinAzucar;
+export default ProductosSinAzucar;
