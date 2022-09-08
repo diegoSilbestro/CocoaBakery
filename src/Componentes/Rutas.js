@@ -11,7 +11,7 @@ const Rutas = ({productItems,productItem,products}) => {
         <Router>
             <Routes>
                 <Route path="/" element= {<Inicio />} />
-                <Route path="/Tienda" element= {<Tienda productItems={productItems} productItem={productItem} products={products}/>} />
+                <Route path="/Tienda" element= {<Tienda />} />
                 <Route path="/ShoppingCart" element={<ShoppingCart/> } />
             </Routes>
             
@@ -19,3 +19,6 @@ const Rutas = ({productItems,productItem,products}) => {
     )
 }
 export default Rutas;
+
+// props de Tienda
+// productItems={productItems} productItem={productItem} products={products}

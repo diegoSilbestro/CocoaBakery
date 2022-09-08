@@ -12,7 +12,7 @@ export function shoppingReducer(state, action) {
       case TYPES.READ_STATE: {
         return {
         ...state,
-        products: action.payload[0],
+        productos: action.payload[0],
         cart: action.payload[1]
         }
         }

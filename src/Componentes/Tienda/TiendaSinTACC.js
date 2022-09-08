@@ -3,30 +3,30 @@ import React from 'react';
 import '../styles/Tienda-productos.css'
 
 
-function TiendaSinTACC({ productItems }) {
+function TiendaSinTACC({ data, addToCart }) {
+
+    const { id, name, price, category, description, img } = data;
+
     return (
         <div>
-            <h1>Tienda Sin TACC</h1>
-            {productItems.map((productItems) => {
-                return (
-                    <div className="row row-cols-1 row-cols-md-2 g-4">
-                        <div className="col">
-                            <div className="card">
-                            <div className='carousel'>
-                                <img src={productItems.img} className="card-img-top" alt={productItems.name} />
-                                <div className="card-body">
-                                    <h5 className="card-title">{productItems.name}</h5>
-                                    <p className="card-text">{productItems.description}</p>
-                                    <h6>${productItems.price}</h6>
-                                    <button class="myButton">Comprar</button>
-                                </div>
+            <div className="row row-cols-1 row-cols-md-2 g-4">
+                <div className="col">
+                    <div className="card">
+                        <div className='carousel'>
+                            <img src={img} className="card-img-top" alt={name} />
+                            <div className="card-body">
+                                <h5 className="card-title">{name}</h5>
+                                <p className="card-text">{description}</p>
+                                <h6>${price}</h6>
+                                <button onClick={() => addToCart(id)}>Agregar</button> 
                             </div>
                         </div>
                     </div>
-                    </div>
-                )
+                </div>
+            </div>
+            
 
-            })}
+           
         </div>
     );
 

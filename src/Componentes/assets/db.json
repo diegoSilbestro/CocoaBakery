@@ -2,16 +2,16 @@
     "productos": [
         {
             "id": 1,
-            "name": "Brownie",
+            "name": "Brownie Diego",
             "price": 400,
             "category": "Sin TACC",
             "description": "El brownie es un bizcocho que no lleva levadura ni bicarbonato, por lo que queda compacto, denso y cremoso a la vez.",
             "img": "https://www.recetasderechupete.com/wp-content/uploads/2019/11/Brownie.jpg"
         },
         {
-            " id": 2,
+            "id": 2,
             "name": "Lemon pie",
-            " price": 600,
+            "price": 600,
             "category": "Sin TACC",
             "description": "La tarta de limón es una tarta formada por una base de masa quebrada u hojaldre que se rellena con crema de limón.",
             "img": "https://www.pequerecetas.com/wp-content/uploads/2021/07/lemon-pie-receta-tarta-de-limon-y-merengue.jpg"
@@ -58,8 +58,8 @@
         },
         {
             "id": 8,
-            "  name": "Devil Cake",
-            " price": 650,
+            "name": "Devil Cake",
+            "price": 650,
             "category": "Sin Azúcar",
             "description": "Esta Devil Cake es un imperdible para los amantes del chocolate! Tierna y húmeda cubierta con crema de chocolate",
             "img": "https://pepacooks.com/wp-content/uploads/2014/06/Devil-Food-Cake-14.jpg"
@@ -89,8 +89,8 @@
         },
         {
             "id": 12,
-            "  name": "Factura",
-            " price": 50,
+            "name": "Factura",
+            "price": 50,
             "category": "Tradicional",
             "description": "Facturas es el nombre genérico con el cual se denomina en Argentina a la variedad de masas y piezas de confitería",
             "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/VariedadDeFacturas2.jpg"
