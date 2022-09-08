@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
-import TiendaSinAzucar from './TiendaSinAzucar'
 import TiendaSinTACC from './TiendaSinTACC'
-import TiendaTradicional from './TiendaTradicional'
 import Contacto from "../Contacto";
 import Header from '../Header';
-import Product from './Product'
-import "../styles/ShoppingCart.css"
+import "../styles/Tienda.css"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import axios from "axios"
 
 
@@ -50,50 +50,115 @@ const Tienda = () => {
         <>
             <div  >
                 <Header />
-            </div>
-            <div className="grid-responsive">
+            </div> <br/> <br/><br/><br/>
+            <Container>
                 <h1>Tienda Sin TACC</h1>
+                <Row>
+                    {
+                        productos.map(productos => {
+                            if (productos.category === "Sin TACC") {
+                                return (
+                                    <>
+                                        <Col lg={4} md={6} sm={12}>
+                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                        </Col>
+                                    </>
+                                )
+                            }
+                        })
+                    }
+                </Row>
+                <h1>Tienda Sin azucar</h1>
+                <Row>
+                    {
+                        productos.map(productos => {
+                            if (productos.category === "Sin Azúcar") {
+                                return (
+                                    <>
+                                        <Col lg={4} md={6} sm={12}>
+                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                        </Col>
+                                    </>
+                                )
+                            }
+                        })
+                    }
+                </Row>
+                <h1>Tienda Tradicional</h1>
+                <Row>
+                    {
+                        productos.map(productos => {
+                            if (productos.category === "Tradicional") {
+                                return (
+                                    <>
+                                        <Col lg={4} md={6} sm={12}>
+                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                        </Col>
+                                    </>
+                                )
+                            }
+                        })
+                    }
+                </Row>
+            </Container>
+
+            {/* <div className="grid-responsive">
+
                 {
-
                     productos.map(productos => {
-                        return (
-                            <div className='product'>
-                                <>
+                        if (productos.category === "Sin TACC") {
+                            return (
 
-                                    <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
-                                </>
-                            </div>
-                        )
+                                <div className='product'>
+                                    <>
+                                        <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                    </>
+                                </div>
+                            )
+                        }
                     })
-
                 }
             </div>
+            <div className="grid-responsive">
+                <h1>Tienda Sin azucar</h1>
+                {
+                    productos.map(productos => {
+                        if (productos.category === "Sin Azúcar") {
+                            return (
+
+                                <div className='product'>
+                                    <>
+                                        <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                    </>
+                                </div>
+                            )
+                        }
+                    })
+                }
+            </div>
+            <div className="grid-responsive">
+                <h1>Tienda Tradicional</h1>
+                {
+                    productos.map(productos => {
+                        if (productos.category === "Tradicional") {
+                            return (
+
+                                <div className='product'>
+                                    <>
+                                        <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                    </>
+                                </div>
+                            )
+                        }
+                    })
+                }
+            </div> */}
+
+
         </>
 
     )
 
-
-
-
-
-    // return (
-    //     <>
-    //         <div  >
-    //             <Header />
-    //         </div>
-    //         <div>
-    //             {console.log(data)}
-    //             <TiendaSinTACC productItems={data} />
-    //             <TiendaSinAzucar productItem={data} />
-    //             <TiendaTradicional products={data} />
-
-    //             <Contacto />
-    //         </div>
-    //     </>
-    // )
 }
 
 export default Tienda
-
-// destructuracion de props en Tienda
-// productItems,productItem,products

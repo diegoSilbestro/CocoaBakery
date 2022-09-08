@@ -9,9 +9,8 @@ function TiendaSinAzucar({ productItem }) {
             {
                 productItem.map((productItem) => {
                     return (
-                        <div className="row row-cols-1 row-cols-md-2 g-4">
-                            <div className="col">
-                                <div className="card">
+                       
+                            <div className="card">
                                 <div className='carousel'>
                                     <img src={productItem.img} className="card-img-top" alt={productItem.name} />
                                     <div className="card-body">
@@ -22,8 +21,7 @@ function TiendaSinAzucar({ productItem }) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        </div>
+                      
                     )
 
                 })}
