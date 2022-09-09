@@ -91,7 +91,7 @@ export default function SubMenu({titulo, handleCloseHamb}) {
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <a href='/#ProductosSinAzucar' className='subMenu'>Sin azucar </a>
+                <a href='/#ProductosSinAzucar' className='subMenu'>Sin Azúcar </a>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />

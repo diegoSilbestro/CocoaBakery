@@ -1,11 +1,11 @@
-
+import { Link } from 'react-router-dom';
 import React from 'react';
 import '../styles/Tienda-productos.css'
 
 function TiendaSinAzucar({ productItem }) {
     return (
         <>
-            <h1>Tienda Sin Azucar</h1>
+            <h2>Tienda Sin Azúcar</h2>
             {
                 productItem.map((productItem) => {
                     return (
@@ -18,7 +18,7 @@ function TiendaSinAzucar({ productItem }) {
                                         <h5 className="card-title">{productItem.name}</h5>
                                         <p className="card-text">{productItem.description}</p>
                                         <h6>${productItem.price}</h6>
-                                        <button class="myButton">Comprar</button>
+                                        <Link to="/ShoppingCart" className="cart"><button class="myButton">Comprar</button></Link>
                                     </div>
                                 </div>
                             </div>

@@ -5,16 +5,26 @@ margin: 0 auto;
     height: 600px;
     margin: 0 auto; 
 }
+.container-tradicional {
+    margin-top: -150px; 
+    margin-bottom: -150px;
+}
+
+.container-sinazucar {
+    margin-top: -150px; 
+}
+
 h5{
     font-size: 35px;
 }
+
 h1{
     font-weight: bolder;
     margin-top: 40px;
 }
 
 .card{
-    margin-top: 230px;
+    margin-top: 250px;
     max-width: 540px;
     border: none;
 }
@@ -25,24 +35,30 @@ h1{
 }
 .card-title{
     text-align: center;
+    color:rgb(211, 80, 47);
+    font-weight: bolder;
 }
 .card-text li{
     list-style: none;
     margin-right: 20px;
 }
+
+.card-body {
+    margin-bottom: -200px;
+    
+}
+
 .container-card .card{
     width: 800px !important;
     margin: 50px;
-
     margin-left: 250px;
-
+    margin-bottom: -800px;
 }
 .container-card .card .img-column{
     height: 250px;
 }
 .container-card2{
-
-    margin-left: 250px;
+  margin-left: 250px;
 }
 .container-card2 .card{
     max-width: 550px !important;
@@ -65,7 +81,7 @@ h1{
 
 @media screen and (max-width:1052px ) {
     .container-card2{
-        /* margin-left: 250px; */
+        margin-left: 250px;
     }
     .container-card2 .card .img1{
         width: 100%;
@@ -83,7 +99,7 @@ h1{
 }
 @media screen and (max-width:934px) {
     .container-card2{
-        /* margin-left: 130px; */
+        margin-left: 130px;
     }
 
 }
@@ -97,7 +113,7 @@ h1{
         display: flex;
         justify-content: center;
         align-items: center;
-        /* margin-left: 10px; */
+        margin-left: 10px;
     }
 }
 @media screen and (max-width:630px) {

@@ -14,12 +14,10 @@ const Tienda = ({productItems,productItem,products}) => {
                 <Header />
             </div>
             <div>
-
                 <TiendaSinTACC productItems={productItems} />
                 <TiendaSinAzucar productItem={productItem} />
                 <TiendaTradicional products={products} />
-
-                <Contacto />
+                <Contacto/>
             </div>
         </>
     )

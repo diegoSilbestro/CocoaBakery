@@ -16,8 +16,8 @@ const ShoppingCart = () => {
     const { productos, cart } = state;
 
     const updateState = async () => {
-        const productsURL = "http://localhost:3000/products";
-        const cartURL = "http://localhost:3000/cart";
+        const productsURL ="";
+        const cartURL = "";
         const resProducts = await axios.get(productsURL);
         const resCart = await axios.get(cartURL);
         const newProduct = await resProducts.data
