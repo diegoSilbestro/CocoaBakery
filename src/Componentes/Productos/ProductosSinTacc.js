@@ -32,9 +32,9 @@ function productosSinTacc() {
                             />
                         </Carousel.Item>
                     </Carousel>
-                    <div class="card-body">
-                        <h5 class="card-title">Sin TACC</h5>
-                        <ul class="card-text">
+                    <div className="card-body">
+                        <h5 className="card-title">Sin TACC</h5>
+                        <ul className="card-text">
                             <li>Lemon Pie</li>
                             <li>Brownie</li>
                             <li>Tiramisú</li>

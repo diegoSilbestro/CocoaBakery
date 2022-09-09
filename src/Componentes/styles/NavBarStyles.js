@@ -14,7 +14,7 @@ export const NavbarWrapper = styled.nav`
     margin-top: 0px;
   }
   .nav1{
-    
+    z-index: 4;
     list-style:none;
     display: flex;
     flex-direction: column;

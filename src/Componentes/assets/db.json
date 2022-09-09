@@ -9,9 +9,9 @@
             "img": "https://www.recetasderechupete.com/wp-content/uploads/2019/11/Brownie.jpg"
         },
         {
-            " id": 2,
+            "id": 2,
             "name": "Lemon pie",
-            " price": 600,
+            "price": 600,
             "category": "Sin TACC",
             "description": "La tarta de limón es una tarta formada por una base de masa quebrada u hojaldre que se rellena con crema de limón.",
             "img": "https://www.pequerecetas.com/wp-content/uploads/2021/07/lemon-pie-receta-tarta-de-limon-y-merengue.jpg"
@@ -42,25 +42,25 @@
         },
         {
             "id": 6,
-            "name": "Mousse de Chocolate",
-           " price": 500,
-           "category":"Sin Azúcar",
+            "name": "Mousse de Vainilla",
+            "price": 500,
+            "category": "Sin Azúcar",
             "description": "Esta mousse de yogurt esta compuesta por un chocolate exquisito bajo en azucares y ademas es super cremoso",
             "img": "https://i0.wp.com/revistamariaorsini.com/wp-content/uploads/2022/02/moussedechocolate-5.jpg?fit=700%2C974&ssl=1"
         },
         {
-           " id": 7,
+            "id": 7,
             "name": "Carrot Cake",
             "price": 600,
-            "category":"Sin Azúcar",
-           " description":"El pastel de zanahoria, tarta de zanahoria o torta de zanahoria es un pastel dulce con zanahoria machacada mezclada en la masa.",
+            "category": "Sin Azúcar",
+            "description": "El pastel de zanahoria, tarta de zanahoria o torta de zanahoria es un pastel dulce con zanahoria machacada mezclada en la masa.",
             "img": "https://www.elinasaiach.com/wp-content/uploads/2022/01/CarrotCortada-8-10-scaled.jpg"
         },
         {
             "id": 8,
-          "  name": "Devil Cake",
-           " price": 650,
-           "category":"Sin Azúcar",
+            "name": "Devil Cake",
+            "price": 650,
+            "category": "Sin Azúcar",
             "description": "Esta Devil Cake es un imperdible para los amantes del chocolate! Tierna y húmeda cubierta con crema de chocolate",
             "img": "https://pepacooks.com/wp-content/uploads/2014/06/Devil-Food-Cake-14.jpg"
         },
@@ -75,8 +75,8 @@
             "id": 10,
             "name": "Macarons",
             "price": 150,
-            "category":"Tradicional",
-           " description": "Un macarron o macaron es un tipo de galleta tradicional de la gastronomía francesa e italiana",
+            "category": "Tradicional",
+            "description": "Un macarron o macaron es un tipo de galleta tradicional de la gastronomía francesa e italiana",
             "img": "https://www.196flavors.com/wp-content/uploads/2019/07/macaron-1-FP.jpg"
         },
         {
@@ -84,14 +84,14 @@
             "name": "Chocotorta",
             "price": 600,
             "category": "Tradicional",
-           " description": "La chocotorta es un postre originario de Argentina. Con el lanzamiento en 1975 por Bagley",
+            "description": "La chocotorta es un postre originario de Argentina. Con el lanzamiento en 1975 por Bagley",
             "img": "https://i.pinimg.com/736x/2a/1a/6b/2a1a6b5daa0d03ff82c0e8b569f455ce.jpg"
         },
         {
             "id": 12,
-          "  name": "Factura",
-           " price":50,
-           "category":"Tradicional",
+            "name": "Factura",
+            "price": 50,
+            "category": "Tradicional",
             "description": "Facturas es el nombre genérico con el cual se denomina en Argentina a la variedad de masas y piezas de confitería",
             "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/VariedadDeFacturas2.jpg"
         }
