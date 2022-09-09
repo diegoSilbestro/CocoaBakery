@@ -2,28 +2,29 @@ import { TYPES } from './Actions/shoppingActions'
 
 export const shoppingInitialState = {
 
-  productos: [ ],
-  cart: [ ]
+  productos: [],
+  cart: []
 }
 
 export function shoppingReducer(state, action) {
   switch (action.type) {
 
-      case TYPES.READ_STATE: {
-        return {
+    case TYPES.READ_STATE: {
+      return {
         ...state,
         productos: action.payload[0],
         cart: action.payload[1]
-        }
-        }
+      }
+    }
 
 
     case TYPES.ADD_TO_CART: {
       let newItem = state.productos.find(productos => productos.id === action.payload)
 
       let itemInCart = state.cart.find(item => item.id === newItem.id)
-
+      
       return itemInCart
+
         ? {
           ...state,
           cart: state.cart.map(item =>
@@ -35,7 +36,9 @@ export function shoppingReducer(state, action) {
         : {
           ...state,
           cart: [...state.cart, { ...newItem, cantidad: 1 }]
+
         }
+
     }
 
 
@@ -66,7 +69,11 @@ export function shoppingReducer(state, action) {
     }
 
     case TYPES.CLEAN_CART: {
-      return shoppingInitialState;
+      return {
+        ...state,
+        cart: []
+      }
+      
     }
 
     default:

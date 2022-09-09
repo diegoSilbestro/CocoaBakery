@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  position:fixed;
+  //position:fixed;
   z-index: 4;
   top:0;
   right:0;
@@ -10,7 +10,6 @@ export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
   border: 2px solid #000;
   margin-top: 1px;
   img{

@@ -13,7 +13,7 @@ function Header() {
   return (
     <HeaderWrapper>
       <Navbar open={open} handleClick={handleClick}/>
-      <MenuButton open={open} handleClick={handleClick} className='hamburgBtn' />
+      {/* <MenuButton open={open} handleClick={handleClick} className='hamburgBtn' /> */}
     </HeaderWrapper>
   );
 }

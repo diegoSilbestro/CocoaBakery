@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
@@ -9,6 +9,7 @@ import "../styles/Tienda.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import CartItem from '../Tienda/CartItem'
 import axios from "axios"
 
 
@@ -46,11 +47,33 @@ const Tienda = () => {
     }
     const cleanCart = () => dispatch({ type: TYPES.CLEAN_CART })
 
+    //estado inicial
+    const initialCartItem = {
+        id: '',
+        name: "",
+        price: '',
+        category: "",
+        description: "",
+        img: "",
+        amount: ""
+    }
+
+    const [cartItem, setCartItem,] = useState(initialCartItem);
+
+    //funciones del CRUD
+
+    const createDataCart = async (data) => {
+        addToCart(data.id);
+        console.log(cart);
+    }
+
+    
+
     return (
         <>
             <div  >
                 <Header />
-            </div> <br/> <br/><br/><br/>
+            </div>
             <Container>
                 <h1>Tienda Sin TACC</h1>
                 <Row>
@@ -60,7 +83,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
                                         </Col>
                                     </>
                                 )
@@ -76,7 +99,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
                                         </Col>
                                     </>
                                 )
@@ -92,7 +115,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
+                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
                                         </Col>
                                     </>
                                 )
@@ -102,57 +125,15 @@ const Tienda = () => {
                 </Row>
             </Container>
 
-            {/* <div className="grid-responsive">
-
+            <h3>Carrito</h3>
+            <div className="box">
                 {
-                    productos.map(productos => {
-                        if (productos.category === "Sin TACC") {
-                            return (
-
-                                <div className='product'>
-                                    <>
-                                        <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
-                                    </>
-                                </div>
-                            )
-                        }
-                    })
+                    cart.map((item, index) => (
+                        <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
+                    ))
                 }
             </div>
-            <div className="grid-responsive">
-                <h1>Tienda Sin azucar</h1>
-                {
-                    productos.map(productos => {
-                        if (productos.category === "Sin Azúcar") {
-                            return (
-
-                                <div className='product'>
-                                    <>
-                                        <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
-                                    </>
-                                </div>
-                            )
-                        }
-                    })
-                }
-            </div>
-            <div className="grid-responsive">
-                <h1>Tienda Tradicional</h1>
-                {
-                    productos.map(productos => {
-                        if (productos.category === "Tradicional") {
-                            return (
-
-                                <div className='product'>
-                                    <>
-                                        <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} />
-                                    </>
-                                </div>
-                            )
-                        }
-                    })
-                }
-            </div> */}
+            <button onClick={cleanCart}>Limpiar Carrito</button>
 
 
         </>

@@ -44,20 +44,18 @@ const ShoppingCart = () => {
     return (
         <>
 
-            <h2 className="">Carrito de Compras</h2>
+            {/* <h2 className="">Carrito de Compras</h2>
 
             <h3>Productos </h3>
             <div className="grid-responsive">
                 {
                     productos.map(productos => {
-                    //    { <Product key={productos.id} data={productos} addToCart={addToCart} />}
-                        
-                        })
+                        //    { <Product key={productos.id} data={productos} addToCart={addToCart} />}
 
-                    
-                    
+                    })
                 }
-            </div>
+            </div> */}
+            
             <h3>Carrito</h3>
             <div className="box">
                 {cart.map((item, index) => (

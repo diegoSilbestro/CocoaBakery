@@ -10,13 +10,14 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 import './styles/navBtn.css'
+import MenuButton from "./MenuButton";
 
 
 
 function Navbar({ open, handleClick }) {
   return (
-    <NavbarWrapper open={open}>
-      <div className="navContainer">
+    <NavbarWrapper open={open} style={{width:"100%"}}>
+      <div className="navContainer" style={{width:"100%"}}>
 
         <NavLink to="/" className="logo"><img src={require('../img/LogoCocoaBakery (1).png')} alt=''></img></NavLink>
         <div className='headerCart' >
@@ -28,6 +29,9 @@ function Navbar({ open, handleClick }) {
               </Badge>
             </IconButton>
           </NavLink>
+        </div>
+        <div className='hamburgBtn'>
+          <MenuButton open={open} handleClick={handleClick}  />
         </div>
 
         <ul className="nav1" >

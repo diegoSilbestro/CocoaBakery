@@ -2,7 +2,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .navBtn {
@@ -28,8 +29,7 @@ ul .css-106c1u2-MuiBadge-badge {
 }
 
 .headerCart {
-    position: fixed;
-    right: 6rem;
+    align-self: center !important;
 }
 
 .headerCart .css-106c1u2-MuiBadge-badge{
