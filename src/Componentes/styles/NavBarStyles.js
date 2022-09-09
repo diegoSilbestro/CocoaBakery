@@ -2,10 +2,7 @@ import styled from "styled-components";
 
 export const NavbarWrapper = styled.nav`
   
-
   .navContainer{
-    overflow:hidden;
-    background-color:#e29c9c;
   }
   .logo{
     display:flex;
@@ -16,13 +13,15 @@ export const NavbarWrapper = styled.nav`
     width:70%;
     margin-top: 0px;
   }
-  .nav{
+  .nav1{
+    z-index: 4;
     list-style:none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+    background: #DABFBF;
     position: fixed;
     top: 8.5vh;
     right: ${props => (props.open ? "0" : "-100%")};
@@ -30,40 +29,39 @@ export const NavbarWrapper = styled.nav`
     height: 90vh;
     transition: right 0.3s linear;
   }
- 
 
-  .nav li{
+
+  .nav1 li{
     margin-top: 2rem;
   }
 
-  .nav li a:hover{
+  .nav1 li a:hover{
     font-weight:bold;
+    color: white;
   }
-
   
-  .nav li:hover >ul{
+  .nav1 li:hover >ul{
     
   }
 
-  @media only screen and (min-width: 624px) {
+  @media only screen and (min-width: 665px) {
     
     .navContainer{
     display: flex;
-    justify-content:space-between;
-    margin-left:10px;
-    margin-right:530px;
+    justify-content:space-around;
     align-items:center;
     align-content: center;
     height:100px;
-    width:100%;
+    width:100vw;
   }
-    .nav{
+    .nav1{
       display: flex;
       position: relative;
       top:0px;
       right:0;
       height: 3rem;
       border-radius: 10px;
+      background-color: #DABFBF;
       flex-direction: row;
       justify-content: center;
       align-items: center;
@@ -72,23 +70,20 @@ export const NavbarWrapper = styled.nav`
       width: fit-content;
     }
 
-    .nav > li{
+    .nav1 > li{
       float: left;
     }
     
-    .nav li{
+    .nav1 li{
       padding-right: 2rem;
       margin:0;
-    }
-    
-    
+    } 
   }
 
-  @media (min-width: 624px) and (max-width: 800px){
+  @media (min-width: 665px) and (max-width: 800px){
     .logo{
       display:none;
     }
   }
-
   
 `;

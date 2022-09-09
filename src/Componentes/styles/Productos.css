@@ -1,3 +1,10 @@
+h1{
+margin: 0 auto;    
+}
+.container-card2 {
+    height: 600px;
+    margin: 0 auto; 
+}
 h5{
     font-size: 35px;
 }
@@ -26,18 +33,22 @@ h1{
 .container-card .card{
     width: 800px !important;
     margin: 50px;
+
     margin-left: 250px;
+
 }
 .container-card .card .img-column{
     height: 250px;
 }
 .container-card2{
+
     margin-left: 250px;
 }
 .container-card2 .card{
     max-width: 550px !important;
     height: 300px;
     margin-left: 150px;
+
 }
 .container-card2 .card .img1{
     width: 400px;
@@ -54,7 +65,7 @@ h1{
 
 @media screen and (max-width:1052px ) {
     .container-card2{
-        margin-left: 250px;
+        /* margin-left: 250px; */
     }
     .container-card2 .card .img1{
         width: 100%;
@@ -72,7 +83,7 @@ h1{
 }
 @media screen and (max-width:934px) {
     .container-card2{
-        margin-left: 130px;
+        /* margin-left: 130px; */
     }
 
 }
@@ -86,7 +97,7 @@ h1{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
 }
 @media screen and (max-width:630px) {

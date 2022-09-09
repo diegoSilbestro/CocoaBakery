@@ -12,8 +12,8 @@ function Header() {
 
   return (
     <HeaderWrapper>
-      <Navbar open={open} />
-      <MenuButton open={open} handleClick={handleClick} />
+      <Navbar open={open} handleClick={handleClick}/>
+      {/* <MenuButton open={open} handleClick={handleClick} className='hamburgBtn' /> */}
     </HeaderWrapper>
   );
 }
