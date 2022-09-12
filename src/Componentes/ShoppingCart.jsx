@@ -8,6 +8,7 @@ import CartItem from './Tienda/CartItem'
 
 import axios from "axios"
 import Tienda from "./Tienda/Tienda"
+import Header from './Header'
 
 
 const ShoppingCart = () => {
@@ -30,7 +31,7 @@ const ShoppingCart = () => {
     }, [])
 
 
-    const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
+    // const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
     const deleteFromCart = (id, all = false) => {
         if (all) {
@@ -41,22 +42,15 @@ const ShoppingCart = () => {
     }
     const cleanCart = () => dispatch({ type: TYPES.CLEAN_CART })
 
+    let cartItemQuantity = 0;    
+    cart.map (item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+    console.log(cartItemQuantity);
+
     return (
         <>
-
-            {/* <h2 className="">Carrito de Compras</h2>
-
-            <h3>Productos </h3>
-            <div className="grid-responsive">
-                {
-                    productos.map(productos => {
-                        //    { <Product key={productos.id} data={productos} addToCart={addToCart} />}
-
-                    })
-                }
-            </div> */}
-            
-            <h3>Carrito</h3>
+            <Header cartItemQuantity = {cartItemQuantity} />
+                     
+            <h1>Carrito de compras</h1>
             <div className="box">
                 {cart.map((item, index) => (
                     <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
