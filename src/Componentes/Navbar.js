@@ -14,7 +14,7 @@ import MenuButton from "./MenuButton";
 
 
 
-function Navbar({ open, handleClick }) {
+function Navbar({ open, handleClick, cartItemQuantity }) {
   return (
     <NavbarWrapper open={open} style={{width:"100%"}}>
       <div className="navContainer" style={{width:"100%"}}>
@@ -24,7 +24,7 @@ function Navbar({ open, handleClick }) {
 
           <NavLink to="/ShoppingCart">
             <IconButton >
-              <Badge badgeContent={4} sx={{ color: '#190707' }}>
+              <Badge badgeContent={cartItemQuantity} sx={{ color: '#190707' }}>
                 <ShoppingCartIcon fontSize="large" sx={{ color: '#190707' }} />
               </Badge>
             </IconButton>
@@ -44,7 +44,7 @@ function Navbar({ open, handleClick }) {
 
             <NavLink to="/ShoppingCart">
               <IconButton  >
-                <Badge badgeContent={4} color="primary" >
+                <Badge badgeContent={cartItemQuantity} color="primary" >
                   <ShoppingCartIcon fontSize="large" sx={{ color: '#190707' }} />
                 </Badge>
               </IconButton>

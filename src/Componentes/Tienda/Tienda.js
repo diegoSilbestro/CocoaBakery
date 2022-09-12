@@ -19,7 +19,7 @@ const Tienda = () => {
 
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { productos, cart } = state;
+    const { productos, cart, method, endpoint, cartUpdate } = state;
 
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
@@ -48,31 +48,35 @@ const Tienda = () => {
     const cleanCart = () => dispatch({ type: TYPES.CLEAN_CART })
 
     //estado inicial
-    const initialCartItem = {
-        id: '',
-        name: "",
-        price: '',
-        category: "",
-        description: "",
-        img: "",
-        amount: ""
-    }
+    const initialCartItem = []
 
-    const [cartItem, setCartItem,] = useState(initialCartItem);
+    const [cartItem, setCartItem] = useState(initialCartItem);
 
-    //funciones del CRUD
+    const crudCart = async (data) => {
+        addToCart(data.id)
 
-    const createDataCart = async (data) => {
-        addToCart(data.id);
+        let options = {
+            method: method,
+            headers: { "content-type": "application/json" },
+            data: JSON.stringify(cartUpdate)
+        };
+
+        let res = await axios(endpoint, options)
+
         console.log(cart);
+        console.log(method);
+        console.log(res);
+
     }
 
-    
+    let cartItemQuantity = 0;    
+    cart.map (item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+    console.log(cartItemQuantity);
 
     return (
         <>
             <div  >
-                <Header />
+                <Header cartItemQuantity = {cartItemQuantity}/>
             </div>
             <Container>
                 <h1>Tienda Sin TACC</h1>
@@ -83,7 +87,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
+                                            <TiendaSinTACC key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -99,7 +103,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
+                                            <TiendaSinTACC key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -115,7 +119,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
+                                            <TiendaSinTACC key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
