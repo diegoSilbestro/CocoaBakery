@@ -13,7 +13,6 @@ function Header({cartItemQuantity}) {
   return (
     <HeaderWrapper>
       <Navbar open={open} handleClick={handleClick} cartItemQuantity = {cartItemQuantity}/>
-      {/* <MenuButton open={open} handleClick={handleClick} className='hamburgBtn' /> */}
     </HeaderWrapper>
   );
 }
