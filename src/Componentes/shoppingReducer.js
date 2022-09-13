@@ -34,10 +34,10 @@ export function shoppingReducer(state, action) {
           endpoint: `http://localhost:5000/cart/${itemInCart.id}`,
           cart: state.cart.map(item =>
             item.id === newItem.id
-              ? {...item, cantidad: item.cantidad + 1}
-              : {...item}
+              ? { ...item, cantidad: item.cantidad + 1 }
+              : { ...item }
           ),
-          cartUpdate: {...itemInCart, cantidad: itemInCart.cantidad + 1}
+          cartUpdate: { ...itemInCart, cantidad: itemInCart.cantidad + 1 }
         }
         : {
           ...state,
@@ -63,10 +63,13 @@ export function shoppingReducer(state, action) {
           ),
           method: "PUT",
           endpoint: `http://localhost:5000/cart/${itemToDelete.id}`,
+          cartUpdate: { ...itemToDelete, cantidad: itemToDelete.cantidad - 1 }
         }
         : {
           ...state,
-          cart: state.cart.filter(item => item.id !== action.payload)
+          cart: state.cart.filter(item => item.id !== action.payload),
+          method: "DELETE",
+          endpoint: `http://localhost:5000/cart/${itemToDelete.id}`
         }
     }
 
@@ -74,16 +77,19 @@ export function shoppingReducer(state, action) {
 
       return {
         ...state,
-        cart: state.cart.filter(item => item.id !== action.payload)
+        cart: state.cart.filter(item => item.id !== action.payload),
+        method: "DELETE",
+        endpoint: `http://localhost:5000/cart/${action.payload}`
       }
     }
 
     case TYPES.CLEAN_CART: {
       return {
         ...state,
-        cart: []
+        cart: [],
+        
       }
-      
+
     }
 
     default:

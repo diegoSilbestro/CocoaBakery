@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
-import TiendaSinTACC from './TiendaSinTACC'
+import ElementoTienda from './ElementoTienda'
 import Contacto from "../Contacto";
 import Header from '../Header';
 import "../styles/Tienda.css"
@@ -38,20 +38,7 @@ const Tienda = () => {
 
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
-    const deleteFromCart = (id, all = false) => {
-        if (all) {
-            dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
-        } else {
-            dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
-        }
-    }
-    const cleanCart = () => dispatch({ type: TYPES.CLEAN_CART })
-
-    //estado inicial
-    const initialCartItem = []
-
-    const [cartItem, setCartItem] = useState(initialCartItem);
-
+  
     const crudCart = async (data) => {
         addToCart(data.id)
 
@@ -62,11 +49,6 @@ const Tienda = () => {
         };
 
         let res = await axios(endpoint, options)
-
-        console.log(cart);
-        console.log(method);
-        console.log(res);
-
     }
 
     let cartItemQuantity = 0;    
@@ -77,9 +59,9 @@ const Tienda = () => {
         <>
             <div  >
                 <Header cartItemQuantity = {cartItemQuantity}/>
-            </div>
+            </div><hr/><hr/><hr/><hr/>
             <Container>
-                <h1>Tienda Sin TACC</h1>
+                <h1 id='TiendaSinTACC'>Tienda Sin TACC</h1>
                 <Row>
                     {
                         productos.map(productos => {
@@ -87,7 +69,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} crudCart={crudCart} />
+                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -95,7 +77,7 @@ const Tienda = () => {
                         })
                     }
                 </Row>
-                <h1>Tienda Sin azucar</h1>
+                <h1 id='TiendaSinAzucar'>Tienda Sin azucar</h1>
                 <Row>
                     {
                         productos.map(productos => {
@@ -103,7 +85,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} crudCart={crudCart} />
+                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -111,7 +93,7 @@ const Tienda = () => {
                         })
                     }
                 </Row>
-                <h1>Tienda Tradicional</h1>
+                <h1 id='TiendaTradicional'>Tienda Tradicional</h1>
                 <Row>
                     {
                         productos.map(productos => {
@@ -119,7 +101,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} crudCart={crudCart} />
+                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -128,17 +110,6 @@ const Tienda = () => {
                     }
                 </Row>
             </Container>
-
-            <h3>Carrito</h3>
-            <div className="box">
-                {
-                    cart.map((item, index) => (
-                        <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
-                    ))
-                }
-            </div>
-            <button onClick={cleanCart}>Limpiar Carrito</button>
-
 
         </>
 

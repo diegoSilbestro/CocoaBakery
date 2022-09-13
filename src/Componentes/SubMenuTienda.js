@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 // import EditIcon from '@mui/icons-material/Edit';
-
+import { HashLink } from 'react-router-hash-link';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CakeIcon from '@mui/icons-material/Cake';
 import {  NavLink } from "react-router-dom"
@@ -52,6 +52,13 @@ const StyledMenu = styled((props) => (
     },
 }));
 
+const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100; 
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+}
+
+
 export default function SubMenu({titulo, handleCloseHamb}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -88,15 +95,15 @@ export default function SubMenu({titulo, handleCloseHamb}) {
             >
                 <MenuItem onClick={handleClose} disableRipple>
                     <CakeIcon />
-                    <a href='/Tienda#TiendaSinTACC' className='subMenu'>Sin TACC</a>
+                    <HashLink smooth to='/Tienda#TiendaSinTACC' scroll={el => scrollWithOffset(el)} className='subMenu'>Sin TACC</HashLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <a href='/Tienda#TiendaSinAzucar' className='subMenu'>Sin azucar</a>
+                <HashLink smooth to='/Tienda#TiendaSinAzucar' scroll={el => scrollWithOffset(el)} className='subMenu'>Sin azucar</HashLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <a href='/Tienda#TiendaTradicional' className='subMenu'>Tradicional</a>
+                <HashLink smooth to='/Tienda#TiendaTradicional' scroll={el => scrollWithOffset(el)} className='subMenu'>Tradicional</HashLink>
                 </MenuItem>
             </StyledMenu>
         </div>

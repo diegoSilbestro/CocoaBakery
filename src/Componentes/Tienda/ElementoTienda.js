@@ -5,7 +5,7 @@ import '../styles/Tienda-productos.css'
 
 function TiendaSinTACC({ data, crudCart }) {
 
-    const { id, name, price, description, img } = data;
+    const {name, price, description, img } = data;
 
     return (
         <div>
