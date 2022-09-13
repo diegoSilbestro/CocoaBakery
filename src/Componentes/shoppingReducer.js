@@ -3,7 +3,10 @@ import { TYPES } from './Actions/shoppingActions'
 export const shoppingInitialState = {
 
   productos: [],
-  cart: []
+  cart: [],
+  method: "",
+  endpoint: "",
+  cartUpdate: {}
 }
 
 export function shoppingReducer(state, action) {
@@ -22,21 +25,26 @@ export function shoppingReducer(state, action) {
       let newItem = state.productos.find(productos => productos.id === action.payload)
 
       let itemInCart = state.cart.find(item => item.id === newItem.id)
-      
+
       return itemInCart
 
         ? {
           ...state,
+          method: "PUT",
+          endpoint: `http://localhost:5000/cart/${itemInCart.id}`,
           cart: state.cart.map(item =>
             item.id === newItem.id
               ? { ...item, cantidad: item.cantidad + 1 }
-              : item
+              : { ...item }
           ),
+          cartUpdate: { ...itemInCart, cantidad: itemInCart.cantidad + 1 }
         }
         : {
           ...state,
-          cart: [...state.cart, { ...newItem, cantidad: 1 }]
-
+          cart: [...state.cart, { ...newItem, cantidad: 1 }],
+          method: "POST",
+          endpoint: "http://localhost:5000/cart",
+          cartUpdate: { ...newItem, cantidad: 1 }
         }
 
     }
@@ -52,11 +60,16 @@ export function shoppingReducer(state, action) {
             item.id === action.payload
               ? { ...item, cantidad: item.cantidad - 1 }
               : item
-          )
+          ),
+          method: "PUT",
+          endpoint: `http://localhost:5000/cart/${itemToDelete.id}`,
+          cartUpdate: { ...itemToDelete, cantidad: itemToDelete.cantidad - 1 }
         }
         : {
           ...state,
-          cart: state.cart.filter(item => item.id !== action.payload)
+          cart: state.cart.filter(item => item.id !== action.payload),
+          method: "DELETE",
+          endpoint: `http://localhost:5000/cart/${itemToDelete.id}`
         }
     }
 
@@ -64,16 +77,19 @@ export function shoppingReducer(state, action) {
 
       return {
         ...state,
-        cart: state.cart.filter(item => item.id !== action.payload)
+        cart: state.cart.filter(item => item.id !== action.payload),
+        method: "DELETE",
+        endpoint: `http://localhost:5000/cart/${action.payload}`
       }
     }
 
     case TYPES.CLEAN_CART: {
       return {
         ...state,
-        cart: []
+        cart: [],
+        
       }
-      
+
     }
 
     default:

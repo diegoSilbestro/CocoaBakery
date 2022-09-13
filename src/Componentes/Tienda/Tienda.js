@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
-import TiendaSinTACC from './TiendaSinTACC'
+import ElementoTienda from './ElementoTienda'
 import Contacto from "../Contacto";
 import Header from '../Header';
 import "../styles/Tienda.css"
@@ -19,7 +19,7 @@ const Tienda = () => {
 
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { productos, cart } = state;
+    const { productos, cart, method, endpoint, cartUpdate } = state;
 
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
@@ -38,44 +38,30 @@ const Tienda = () => {
 
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
-    const deleteFromCart = (id, all = false) => {
-        if (all) {
-            dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
-        } else {
-            dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
-        }
-    }
-    const cleanCart = () => dispatch({ type: TYPES.CLEAN_CART })
+  
+    const crudCart = async (data) => {
+        addToCart(data.id)
 
-    //estado inicial
-    const initialCartItem = {
-        id: '',
-        name: "",
-        price: '',
-        category: "",
-        description: "",
-        img: "",
-        amount: ""
+        let options = {
+            method: method,
+            headers: { "content-type": "application/json" },
+            data: JSON.stringify(cartUpdate)
+        };
+
+        let res = await axios(endpoint, options)
     }
 
-    const [cartItem, setCartItem,] = useState(initialCartItem);
-
-    //funciones del CRUD
-
-    const createDataCart = async (data) => {
-        addToCart(data.id);
-        console.log(cart);
-    }
-
-    
+    let cartItemQuantity = 0;    
+    cart.map (item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+    console.log(cartItemQuantity);
 
     return (
         <>
             <div  >
-                <Header />
-            </div>
+                <Header cartItemQuantity = {cartItemQuantity}/>
+            </div><hr/><hr/><hr/><hr/>
             <Container>
-                <h1>Tienda Sin TACC</h1>
+                <h1 id='TiendaSinTACC'>Tienda Sin TACC</h1>
                 <Row>
                     {
                         productos.map(productos => {
@@ -83,7 +69,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
+                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -91,7 +77,7 @@ const Tienda = () => {
                         })
                     }
                 </Row>
-                <h1>Tienda Sin azucar</h1>
+                <h1 id='TiendaSinAzucar'>Tienda Sin azucar</h1>
                 <Row>
                     {
                         productos.map(productos => {
@@ -99,7 +85,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
+                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -107,7 +93,7 @@ const Tienda = () => {
                         })
                     }
                 </Row>
-                <h1>Tienda Tradicional</h1>
+                <h1 id='TiendaTradicional'>Tienda Tradicional</h1>
                 <Row>
                     {
                         productos.map(productos => {
@@ -115,7 +101,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <TiendaSinTACC key={productos.id} data={productos} addToCart={addToCart} createDataCart={createDataCart} />
+                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
                                         </Col>
                                     </>
                                 )
@@ -124,17 +110,6 @@ const Tienda = () => {
                     }
                 </Row>
             </Container>
-
-            <h3>Carrito</h3>
-            <div className="box">
-                {
-                    cart.map((item, index) => (
-                        <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
-                    ))
-                }
-            </div>
-            <button onClick={cleanCart}>Limpiar Carrito</button>
-
 
         </>
 

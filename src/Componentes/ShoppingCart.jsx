@@ -8,12 +8,13 @@ import CartItem from './Tienda/CartItem'
 
 import axios from "axios"
 import Tienda from "./Tienda/Tienda"
+import Header from './Header'
 
 
 const ShoppingCart = () => {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { productos, cart } = state;
+    const { productos, cart, method, endpoint, cartUpdate } = state;
 
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
@@ -29,34 +30,51 @@ const ShoppingCart = () => {
         updateState()
     }, [])
 
-
-    const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
-
-    const deleteFromCart = (id, all = false) => {
+    const deleteFromCart = async (id, all = false) => {
         if (all) {
             dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
+            let options = {
+                method: method,
+                headers: { "content-type": "application/json" }
+            };
+    
+            let res = await axios(endpoint, options)
         } else {
             dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
+            let options = {
+                method: method,
+                headers: { "content-type": "application/json" },
+                data: JSON.stringify(cartUpdate)
+            };
+
+            let res = await axios(endpoint, options)
         }
     }
-    const cleanCart = () => dispatch({ type: TYPES.CLEAN_CART })
+
+
+
+    const cleanCart = async () =>{
+        dispatch({ type: TYPES.CLEAN_CART })
+        cart.map (item => {
+            let endpoint = `http://localhost:5000/cart/${item.id}`;
+            let options = {
+                method: "DELETE",
+                headers: { "content-type": "application/json" }
+            };
+    
+            let res =  axios(endpoint, options)
+        })
+    } 
+
+    let cartItemQuantity = 0;
+    cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+    console.log(cartItemQuantity);
 
     return (
         <>
+            <Header cartItemQuantity={cartItemQuantity} />
 
-            {/* <h2 className="">Carrito de Compras</h2>
-
-            <h3>Productos </h3>
-            <div className="grid-responsive">
-                {
-                    productos.map(productos => {
-                        //    { <Product key={productos.id} data={productos} addToCart={addToCart} />}
-
-                    })
-                }
-            </div> */}
-            
-            <h3>Carrito</h3>
+            <h1>Carrito de compras</h1>
             <div className="box">
                 {cart.map((item, index) => (
                     <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />

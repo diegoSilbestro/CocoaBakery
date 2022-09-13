@@ -3,7 +3,7 @@ import { HeaderWrapper } from "./styles/Header";
 import Navbar from "./Navbar";
 import MenuButton from "./MenuButton";
 
-function Header() {
+function Header({cartItemQuantity}) {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -12,8 +12,7 @@ function Header() {
 
   return (
     <HeaderWrapper>
-      <Navbar open={open} handleClick={handleClick}/>
-      {/* <MenuButton open={open} handleClick={handleClick} className='hamburgBtn' /> */}
+      <Navbar open={open} handleClick={handleClick} cartItemQuantity = {cartItemQuantity}/>
     </HeaderWrapper>
   );
 }

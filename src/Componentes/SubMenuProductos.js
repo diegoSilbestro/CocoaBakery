@@ -5,8 +5,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CakeIcon from '@mui/icons-material/Cake';
-import {  NavLink } from "react-router-dom"
 import './styles/subMenu.css';
+import { HashLink } from 'react-router-hash-link';
 
 
 
@@ -51,6 +51,12 @@ const StyledMenu = styled((props) => (
     },
 }));
 
+const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100; 
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+}
+
 export default function SubMenu({titulo, handleCloseHamb}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -87,15 +93,19 @@ export default function SubMenu({titulo, handleCloseHamb}) {
             >
                 <MenuItem onClick={handleClose} disableRipple>
                     <CakeIcon />
-                    <a href='/#ProductosSinTACC' className='subMenu'>Sin TACC </a>
+                    <HashLink smooth to='/#ProductosSinTACC' scroll={el => scrollWithOffset(el)} className='subMenu'>Sin TACC </HashLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
+<<<<<<< HEAD
                 <a href='/#ProductosSinAzucar' className='subMenu'>Sin Azúcar </a>
+=======
+                <HashLink smooth to='/#ProductosSinAzucar' scroll={el => scrollWithOffset(el)} className='subMenu'>Sin azucar </HashLink>
+>>>>>>> main
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-                <a href='/#ProductosTradicional' className='subMenu'>Tradicional </a>
+                <HashLink smooth to='/#ProductosTradicional' scroll={el => scrollWithOffset(el)} className='subMenu'>Tradicional </HashLink>
                 </MenuItem>
             </StyledMenu>
         </div>
