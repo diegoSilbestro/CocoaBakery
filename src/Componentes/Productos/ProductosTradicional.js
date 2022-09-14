@@ -7,32 +7,32 @@ function ProductosTradicional() {
 
         <>
             <div className="container-tradicional">
-                <h1 id='ProductosTradicional'>Productos tradicionales</h1>
+                <h1 className="producto-" id='ProductosTradicional'>Productos Tradicionales</h1>
                 <div className='container-card2' style={styles}>
                     <div class="card">
-                        <Carousel>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src={require('../../img/img7.jpg')}
-                                    alt="First slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src={require('../../img/img8.jpg')}
-                                    alt="Second slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src={require('../../img/img9.jpg')}
-                                    alt="Third slide"
-                                />
-                            </Carousel.Item>
-                        </Carousel>
+                            <Carousel>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src={require('../../img/img7.jpg')}
+                                        alt="First slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src={require('../../img/img8.jpg')}
+                                        alt="Second slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src={require('../../img/img9.jpg')}
+                                        alt="Third slide"
+                                    />
+                                </Carousel.Item>
+                            </Carousel>
                         <div class="card-body">
                             <h5 class="card-title">Tradicionales</h5>
                             <ul class="card-text">

@@ -97,11 +97,7 @@ export default function SubMenu({titulo, handleCloseHamb}) {
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />
-<<<<<<< HEAD
-                <a href='/#ProductosSinAzucar' className='subMenu'>Sin Azúcar </a>
-=======
                 <HashLink smooth to='/#ProductosSinAzucar' scroll={el => scrollWithOffset(el)} className='subMenu'>Sin azucar </HashLink>
->>>>>>> main
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
                 <CakeIcon />

@@ -77,7 +77,7 @@ const Tienda = () => {
                         })
                     }
                 </Row>
-                <h1 id='TiendaSinAzucar'>Tienda Sin azucar</h1>
+                <h1 id='TiendaSinAzucar'>Tienda Sin Azúcar</h1>
                 <Row>
                     {
                         productos.map(productos => {

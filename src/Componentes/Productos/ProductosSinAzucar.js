@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../styles/ProductosSinAzucar.css';
+import '../styles/ProductosSinAzucar.css';
 import styles from '../styles/Productos.css';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -9,7 +9,7 @@ function ProductosSinAzucar() {
 
         <>
             <div className="container-sinazucar">
-                <h1 id='ProductosSinAzucar'>Productos Sin Azúcar</h1>
+                <h1 className='producto-sinAzucar' id='ProductosSinAzucar'>Productos Sin Azúcar</h1>
                 <div className='container-card2' style={styles}>
                     <div class="card">
                         <Carousel>
