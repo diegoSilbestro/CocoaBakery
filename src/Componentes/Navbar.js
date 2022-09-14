@@ -45,7 +45,7 @@ function Navbar({ open, handleClick, cartItemQuantity }) {
           <li className='ulCart'>
 
 
-            <NavLink to="/ShoppingCart">
+            <NavLink to="/ShoppingCart" scroll={el => scrollWithOffset(el)}>
               <IconButton  >
                 <Badge badgeContent={cartItemQuantity} color="primary" >
                   <ShoppingCartIcon fontSize="large" sx={{ color: '#190707' }} />
