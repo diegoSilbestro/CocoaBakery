@@ -48,7 +48,9 @@ const Tienda = () => {
             data: JSON.stringify(cartUpdate)
         };
 
-        let res = await axios(endpoint, options)
+        let res = await axios(endpoint, options).catch(error=>console.log(error, 'error'))
+        console.log(endpoint)
+        console.log(options);
     }
 
     let cartItemQuantity = 0;    
@@ -59,7 +61,7 @@ const Tienda = () => {
         <>
             <div  >
                 <Header cartItemQuantity = {cartItemQuantity}/>
-            </div><hr/><hr/><hr/><hr/>
+            </div><hr/><hr/><hr/><hr/><hr/>
             <Container>
                 <h1 id='TiendaSinTACC'>Tienda Sin TACC</h1>
                 <Row>

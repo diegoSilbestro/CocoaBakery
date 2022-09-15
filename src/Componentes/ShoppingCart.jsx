@@ -3,18 +3,15 @@ import React, { useEffect } from 'react'
 import { TYPES } from './Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from './shoppingReducer'
 import { useReducer } from 'react'
-import Product from './Tienda/Product'
 import CartItem from './Tienda/CartItem'
-
 import axios from "axios"
-import Tienda from "./Tienda/Tienda"
 import Header from './Header'
 
 
 const ShoppingCart = () => {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { productos, cart, method, endpoint, cartUpdate } = state;
+    const {cart, method, endpoint, cartUpdate } = state;
 
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
@@ -38,7 +35,7 @@ const ShoppingCart = () => {
                 headers: { "content-type": "application/json" }
             };
     
-            let res = await axios(endpoint, options)
+            await axios(endpoint, options)
         } else {
             dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
             let options = {
@@ -73,7 +70,7 @@ const ShoppingCart = () => {
     return (
         <>
             <Header cartItemQuantity={cartItemQuantity} />
-
+            <hr/><hr/><hr/><hr/><hr/>
             <h1>Carrito de compras</h1>
             <div className="box">
                 {cart.map((item, index) => (
