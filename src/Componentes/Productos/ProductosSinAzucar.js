@@ -1,14 +1,15 @@
 import React from 'react';
-// import '../styles/ProductosSinAzucar.css';
+import '../styles/ProductosSinAzucar.css';
 import styles from '../styles/Productos.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 
 function ProductosSinAzucar() {
     return (
-                    
-            <>
-                <h1 id='ProductosSinAzucar'>Productos sin azucar</h1>
+
+        <>
+            <div className="container-sinazucar">
+                <h1 className='producto-sinAzucar' id='ProductosSinAzucar'>Productos Sin Azúcar</h1>
                 <div className='container-card2' style={styles}>
                     <div class="card">
                         <Carousel>
@@ -35,7 +36,7 @@ function ProductosSinAzucar() {
                             </Carousel.Item>
                         </Carousel>
                         <div class="card-body">
-                            <h5 class="card-title">Sin azucar</h5>
+                            <h5 class="card-title">Sin Azúcar</h5>
                             <ul class="card-text">
                                 <li>Mousse de Yogurt </li>
                                 <li>Mousse de chocolate</li>
@@ -45,8 +46,9 @@ function ProductosSinAzucar() {
                         </div>
                     </div>
                 </div>
-            </>
-       
+            </div>
+        </>
+
     );
 }
 

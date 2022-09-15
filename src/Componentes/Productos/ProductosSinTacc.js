@@ -4,10 +4,10 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function productosSinTacc() {
     return (
-        
-            <>
-            <h1 id='ProductosSinTACC'>Productos sin TACC</h1>
-            <div className='container-card2'style={styles}>
+
+        <>
+            <h1 className='producto-sinTacc' id='ProductosSinTACC'>Productos sin TACC</h1>
+            <div className='container-card2' style={styles}>
                 <div class="card" >
                     <Carousel>
                         <Carousel.Item>
@@ -45,7 +45,7 @@ function productosSinTacc() {
                 </div>
             </div>
         </>
-        
+
     );
 }
 

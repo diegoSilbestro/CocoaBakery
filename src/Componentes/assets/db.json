@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "name": "Tiramisu",
+      "name": "Tiramisú",
       "price": 550,
       "category": "Sin TACC",
       "description": "El tiramisú es un pastel frío que se monta en capas.",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "name": "Chessecake",
+      "name": "Cheescake",
       "price": 450,
       "category": "Sin TACC",
       "description": "Chesscake es un postre hecho a base de ciertos ingredientes",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "name": "Mousse de Vainilla",
+      "name": "Mousse de Chocolate",
       "price": 500,
       "category": "Sin Azúcar",
       "description": "Esta mousse de yogurt esta compuesta por un chocolate exquisito bajo en azucares y ademas es super cremoso",
@@ -76,7 +76,7 @@
       "name": "Macarons",
       "price": 150,
       "category": "Tradicional",
-      "description": "Un macarron o macaron es un tipo de galleta tradicional de la gastronomía francesa e italiana",
+      "description": "Un macarron o macaron es un tipo de galleta de harina de almendra y relleno cremoso, tradicional de la gastronomía francesa.",
       "img": "https://www.196flavors.com/wp-content/uploads/2019/07/macaron-1-FP.jpg"
     },
     {
@@ -110,33 +110,6 @@
       "category": "Tradicional"
     }
   ],
-  "cart": [
-    {
-      "id": 3,
-      "name": "Tiramisu",
-      "price": 550,
-      "category": "Sin TACC",
-      "description": "El tiramisú es un pastel frío que se monta en capas.",
-      "img": "https://www.elmundoeats.com/wp-content/uploads/2020/12/Eating-10-Minute-Eggless-Tiramisu.jpg",
-      "cantidad": 16
-    },
-    {
-      "id": 2,
-      "name": "Lemon pie",
-      "price": 600,
-      "category": "Sin TACC",
-      "description": "La tarta de limón es una tarta formada por una base de masa quebrada u hojaldre que se rellena con crema de limón.",
-      "img": "https://www.pequerecetas.com/wp-content/uploads/2021/07/lemon-pie-receta-tarta-de-limon-y-merengue.jpg",
-      "cantidad": 7
-    },
-    {
-      "id": 6,
-      "name": "Mousse de Vainilla",
-      "price": 500,
-      "category": "Sin Azúcar",
-      "description": "Esta mousse de yogurt esta compuesta por un chocolate exquisito bajo en azucares y ademas es super cremoso",
-      "img": "https://i0.wp.com/revistamariaorsini.com/wp-content/uploads/2022/02/moussedechocolate-5.jpg?fit=700%2C974&ssl=1",
-      "cantidad": 1
-    }
-  ]
+  "cart": []
+
 }
