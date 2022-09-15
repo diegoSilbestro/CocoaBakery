@@ -1,4 +1,4 @@
-import { TYPES } from './Actions/shoppingActions'
+import { TYPES } from '../Actions/shoppingActions'
 
 
 export const shoppingInitialState = {

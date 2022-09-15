@@ -4,7 +4,7 @@ import ShoppingCart from './ShoppingCart';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Inicio from './Inicio';
-import Tienda from './Tienda/Tienda'
+import Tienda from '../Tienda/Tienda'
 
 const Rutas = ({productItems,productItem,products}) => {
     return (

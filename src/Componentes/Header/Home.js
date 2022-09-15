@@ -2,7 +2,7 @@ import React from 'react';
 import img1 from '../img/img1.jpg'
 import img2 from '../img/img2.jpg'
 import img3 from '../img/img3.jpg'
-import Nosotros from './Nosotros';
+import Nosotros from '../About Us/Nosotros';
 import styles from './styles/Home.css'
 
 const Home = () => {
