@@ -1,0 +1,105 @@
+import React, { useEffect } from 'react'
+import { TYPES } from './Actions/shoppingActions'
+import { shoppingReducer, shoppingInitialState } from './shoppingReducer'
+import { useReducer } from 'react'
+import CartItem from './Cart/CartItem'
+import axios from "axios"
+<<<<<<< HEAD:src/Componentes/Cart/ShoppingCart.jsx
+import Header from '../Header/Header'
+=======
+import Header from './Header/Header'
+import './styles/ShoppingCart.css'
+>>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403:src/Componentes/ShoppingCart.jsx
+
+
+const ShoppingCart = () => {
+    const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
+
+    const { cart, method, endpoint, cartUpdate } = state;
+
+    const updateState = async () => {
+        const productsURL = "http://localhost:5000/productos";
+        const cartURL = "http://localhost:5000/cart";
+        const resProducts = await axios.get(productsURL),
+            resCart = await axios.get(cartURL);
+        const newProduct = await resProducts.data
+        const newCartItem = await resCart.data
+
+        dispatch({ type: TYPES.READ_STATE, payload: [newProduct, newCartItem] })
+    }
+    useEffect(() => {
+        updateState()
+    }, [])
+
+    const deleteFromCart = async (id, all = false) => {
+        if (all) {
+            dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
+            let options = {
+                method: method,
+                headers: { "content-type": "application/json" }
+            };
+
+            await axios(endpoint, options)
+        } else {
+            dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
+            let options = {
+                method: method,
+                headers: { "content-type": "application/json" },
+                data: JSON.stringify(cartUpdate)
+            };
+
+            await axios(endpoint, options)
+        }
+    }
+
+
+
+<<<<<<< HEAD:src/Componentes/Cart/ShoppingCart.jsx
+    const cleanCart = () =>{
+        dispatch({ type: TYPES.CLEAN_CART })
+         cart.map (async item => {
+=======
+    const cleanCart = async () => {
+        dispatch({ type: TYPES.CLEAN_CART })
+        cart.map(item => {
+>>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403:src/Componentes/ShoppingCart.jsx
+            let endpoint = `http://localhost:5000/cart/${item.id}`;
+            let options = {
+                method: "DELETE",
+                headers: { "content-type": "application/json" }
+            };
+<<<<<<< HEAD:src/Componentes/Cart/ShoppingCart.jsx
+    
+             await axios(endpoint, options)
+        })
+        
+    } 
+=======
+
+            let res = axios(endpoint, options)
+        })
+    }
+>>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403:src/Componentes/ShoppingCart.jsx
+
+    let cartItemQuantity = 0;
+    cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+
+    return (
+        <>
+            <Header cartItemQuantity={cartItemQuantity} />
+            <hr /><hr /><hr /><hr /><hr />
+            <h1>Carrito de Compras</h1>
+            <div className="box">
+                {cart.map((item, index) => (
+                    <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
+
+                ))}
+
+            </div>
+            <button className='btn-cleanCart' onClick={cleanCart}>Limpiar Carrito</button>
+        </>
+    )
+}
+
+export default ShoppingCart
+

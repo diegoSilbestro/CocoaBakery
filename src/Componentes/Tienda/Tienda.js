@@ -13,8 +13,6 @@ import axios from "axios"
 
 const Tienda = () => {
 
-
-
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
     const { productos, cart, method, endpoint, cartUpdate } = state;
@@ -22,8 +20,8 @@ const Tienda = () => {
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
         const cartURL = "http://localhost:5000/cart";
-        const resProducts = await axios.get(productsURL),
-            resCart = await axios.get(cartURL);
+        const resProducts = await axios.get(productsURL);
+        const resCart = await axios.get(cartURL);
         const newProduct = await resProducts.data
         const newCartItem = await resCart.data
 
@@ -33,10 +31,8 @@ const Tienda = () => {
         updateState();
     }, [])
 
-
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
-  
     const crudCart = async (data) => {
         await addToCart(data.id)
 
@@ -45,6 +41,7 @@ const Tienda = () => {
             headers: { "content-type": "application/json" },
             data: JSON.stringify(cartUpdate)
         };
+<<<<<<< HEAD
         console.log(options);
         await console.log(endpoint);
 
@@ -53,12 +50,24 @@ const Tienda = () => {
 
     let cartItemQuantity = 0;    
     cart.map (item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+=======
+
+        let res = await axios(endpoint, options).catch(error => console.log(error, 'error'))
+        console.log(endpoint)
+        console.log(options);
+        console.log(res)
+    }
+
+    let cartItemQuantity = 0;
+    cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+    console.log(cartItemQuantity);
+>>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403
 
     return (
         <>
             <div  >
-                <Header cartItemQuantity = {cartItemQuantity}/>
-            </div><hr/><hr/><hr/><hr/><hr/>
+                <Header cartItemQuantity={cartItemQuantity} />
+            </div><hr /><hr /><hr /><hr /><hr />
             <Container>
                 <h1 id='TiendaSinTACC'>Tienda Sin TACC</h1>
                 <Row>
