@@ -8,7 +8,7 @@ import { HashLink } from 'react-router-hash-link';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
-import './styles/navBtn.css'
+import '../styles/navBtn.css'
 import MenuButton from "./MenuButton";
 
 const scrollWithOffset = (el) => {

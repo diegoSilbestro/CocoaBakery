@@ -5,7 +5,7 @@ import { shoppingReducer, shoppingInitialState } from './shoppingReducer'
 import { useReducer } from 'react'
 import CartItem from './CartItem'
 import axios from "axios"
-import Header from '../Header'
+import Header from '../Header/Header'
 
 
 const ShoppingCart = () => {

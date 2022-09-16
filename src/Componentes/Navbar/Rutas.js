@@ -1,9 +1,9 @@
 
-import ShoppingCart from './ShoppingCart';
+import ShoppingCart from '../Cart/ShoppingCart';
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Inicio from './Inicio';
+import Inicio from '../Header/Inicio';
 import Tienda from '../Tienda/Tienda'
 
 const Rutas = ({productItems,productItem,products}) => {

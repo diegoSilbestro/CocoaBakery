@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { HeaderWrapper } from "./styles/Header";
-import Navbar from "./Navbar";
+import { HeaderWrapper } from "../styles/Header";
+import Navbar from "../Navbar/Navbar";
 
 function Header({cartItemQuantity}) {
   const [open, setOpen] = useState(false);

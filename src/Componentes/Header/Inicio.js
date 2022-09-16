@@ -2,8 +2,8 @@ import React from "react";
 import ProductosSinAzucar from "../Productos/ProductosSinAzucar";
 import ProductosSinTacc from "../Productos/ProductosSinTacc";
 import ProductosTradicional from "../Productos/ProductosTradicional";
-import Contacto from "./Contacto";
-import './styles/Inicio.css';
+import Contacto from "../Footer/Contacto";
+import '../styles/Inicio.css';
 import Header from "./Header";
 import Home from './Home'
 

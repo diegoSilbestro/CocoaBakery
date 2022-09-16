@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../img/LogoCocoaBakery.jpg'
-import Style from './styles/Nosotros.css'
+import Logo from '../About Us/LogoCocoaBakery.jpg'
+import Style from '../styles/Nosotros.css'
 
 const Nosotros = () => {
   return (

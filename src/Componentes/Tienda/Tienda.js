@@ -1,9 +1,9 @@
 import React, { useEffect} from 'react'
 import { TYPES } from '../Actions/shoppingActions'
-import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
+import { shoppingReducer, shoppingInitialState } from '../Cart/shoppingReducer'
 import { useReducer } from 'react'
 import ElementoTienda from './ElementoTienda'
-import Header from '../Header';
+import Header from '../Header/Header';
 import "../styles/Tienda.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
