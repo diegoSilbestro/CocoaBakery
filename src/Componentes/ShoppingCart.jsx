@@ -71,7 +71,7 @@ const ShoppingCart = () => {
         <>
             <Header cartItemQuantity={cartItemQuantity} />
             <hr /><hr /><hr /><hr /><hr />
-            <h1>Carrito de compras</h1>
+            <h1>Carrito de Compras</h1>
             <div className="box">
                 {cart.map((item, index) => (
                     <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
@@ -79,7 +79,7 @@ const ShoppingCart = () => {
                 ))}
 
             </div>
-            <button className='btnCart' onClick={cleanCart}>Limpiar Carrito</button>
+            <button className='btn-cleanCart' onClick={cleanCart}>Limpiar Carrito</button>
         </>
     )
 }
