@@ -5,7 +5,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CakeIcon from '@mui/icons-material/Cake';
-import './styles/subMenu.css';
+import '../styles/subMenu.css';
 import { HashLink } from 'react-router-hash-link';
 
 
