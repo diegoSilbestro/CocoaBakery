@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "name": "Tiramisu",
+      "name": "Tiramisú",
       "price": 550,
       "category": "Sin TACC",
       "description": "El tiramisú es un pastel frío que se monta en capas.",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "name": "Chessecake",
+      "name": "Cheescake",
       "price": 450,
       "category": "Sin TACC",
       "description": "Chesscake es un postre hecho a base de ciertos ingredientes",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "name": "Mousse de Vainilla",
+      "name": "Mousse de Chocolate",
       "price": 500,
       "category": "Sin Azúcar",
       "description": "Esta mousse de yogurt esta compuesta por un chocolate exquisito bajo en azucares y ademas es super cremoso",
@@ -76,7 +76,7 @@
       "name": "Macarons",
       "price": 150,
       "category": "Tradicional",
-      "description": "Un macarron o macaron es un tipo de galleta tradicional de la gastronomía francesa e italiana",
+      "description": "Un macarron o macaron es un tipo de galleta de harina de almendra y relleno cremoso, tradicional de la gastronomía francesa.",
       "img": "https://www.196flavors.com/wp-content/uploads/2019/07/macaron-1-FP.jpg"
     },
     {
@@ -110,6 +110,7 @@
       "category": "Tradicional"
     }
   ],
+<<<<<<< HEAD
   "cart": [
     {
       "id": 1,
@@ -139,4 +140,8 @@
       "cantidad": 2
     }
   ]
+=======
+  "cart": []
+
+>>>>>>> 4f8f880231ea5185a2574974c85566faf628ce2c
 }
