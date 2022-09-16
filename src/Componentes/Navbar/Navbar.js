@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarWrapper } from "./styles/NavBarStyles";
+import { NavbarWrapper } from "../styles/NavBarStyles";
 import SubMenuProductos from "./SubMenuProductos";
 import SubMenuTienda from "./SubMenuTienda";
 import NavButton from "./NavButton";
