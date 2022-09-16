@@ -2,13 +2,13 @@ import React from "react";
 import { NavbarWrapper } from "../styles/NavBarStyles";
 import SubMenuProductos from "./SubMenuProductos";
 import SubMenuTienda from "./SubMenuTienda";
-import NavButton from "./NavButton";
+import NavButton from "../Navbar/NavButton";
 import { NavLink } from "react-router-dom"
 import { HashLink } from 'react-router-hash-link';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
-import './styles/navBtn.css'
+import '../styles/navBtn.css'
 import MenuButton from "./MenuButton";
 
 const scrollWithOffset = (el) => {
@@ -22,7 +22,7 @@ function Navbar({ open, handleClick, cartItemQuantity }) {
     <NavbarWrapper open={open} style={{ width: "100%" }}>
       <div className="navContainer" style={{ width: "100%" }}>
 
-        <HashLink smooth to="/#home" scroll={el => scrollWithOffset(el)} className="logo"><img src={require('../img/LogoCocoaBakery (1).png')} alt=''></img></HashLink>
+        <HashLink smooth to="/#home" scroll={el => scrollWithOffset(el)} className="logo"><img src={require('../../img/LogoCocoaBakery (1).png')} alt=''></img></HashLink>
         <div className='headerCart' >
 
           <NavLink to="/ShoppingCart">
