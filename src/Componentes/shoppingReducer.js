@@ -28,7 +28,7 @@ export function shoppingReducer(state, action) {
       let itemInCart = state.cart.find(item => item.id === newItem.id)
 
       return itemInCart
-
+        
         ? {
           ...state,
           method: "PUT",
@@ -39,6 +39,7 @@ export function shoppingReducer(state, action) {
               : { ...item }
           ),
           cartUpdate: { ...itemInCart, cantidad: itemInCart.cantidad + 1 }
+            
         }
         : {
           ...state,
@@ -88,7 +89,7 @@ export function shoppingReducer(state, action) {
       return {
         ...state,
         cart: [],
-        
+
       }
 
     }

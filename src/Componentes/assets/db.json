@@ -112,13 +112,22 @@
   ],
   "cart": [
     {
+      "id": 1,
+      "name": "Brownie",
+      "price": 400,
+      "category": "Sin TACC",
+      "description": "El brownie es un bizcocho que no lleva levadura ni bicarbonato, por lo que queda compacto, denso y cremoso a la vez.",
+      "img": "https://www.recetasderechupete.com/wp-content/uploads/2019/11/Brownie.jpg",
+      "cantidad": 5
+    },
+    {
       "id": 3,
       "name": "Tiramisu",
       "price": 550,
       "category": "Sin TACC",
       "description": "El tiramisú es un pastel frío que se monta en capas.",
       "img": "https://www.elmundoeats.com/wp-content/uploads/2020/12/Eating-10-Minute-Eggless-Tiramisu.jpg",
-      "cantidad": 16
+      "cantidad": 8
     },
     {
       "id": 2,
@@ -127,16 +136,7 @@
       "category": "Sin TACC",
       "description": "La tarta de limón es una tarta formada por una base de masa quebrada u hojaldre que se rellena con crema de limón.",
       "img": "https://www.pequerecetas.com/wp-content/uploads/2021/07/lemon-pie-receta-tarta-de-limon-y-merengue.jpg",
-      "cantidad": 7
-    },
-    {
-      "id": 6,
-      "name": "Mousse de Vainilla",
-      "price": 500,
-      "category": "Sin Azúcar",
-      "description": "Esta mousse de yogurt esta compuesta por un chocolate exquisito bajo en azucares y ademas es super cremoso",
-      "img": "https://i0.wp.com/revistamariaorsini.com/wp-content/uploads/2022/02/moussedechocolate-5.jpg?fit=700%2C974&ssl=1",
-      "cantidad": 1
+      "cantidad": 2
     }
   ]
 }

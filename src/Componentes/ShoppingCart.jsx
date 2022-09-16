@@ -44,28 +44,28 @@ const ShoppingCart = () => {
                 data: JSON.stringify(cartUpdate)
             };
 
-            let res = await axios(endpoint, options)
+            await axios(endpoint, options)
         }
     }
 
 
 
-    const cleanCart = async () =>{
+    const cleanCart = () =>{
         dispatch({ type: TYPES.CLEAN_CART })
-        cart.map (item => {
+         cart.map (async item => {
             let endpoint = `http://localhost:5000/cart/${item.id}`;
             let options = {
                 method: "DELETE",
                 headers: { "content-type": "application/json" }
             };
     
-            let res =  axios(endpoint, options)
+             await axios(endpoint, options)
         })
+        
     } 
 
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
-    console.log(cartItemQuantity);
 
     return (
         <>
