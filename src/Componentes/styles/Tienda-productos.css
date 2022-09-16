@@ -46,3 +46,15 @@ div.card-body{
     position: relative;
     top: 1px;
 }
+
+.ProductosSinAzucar{
+    height: 90vh;
+}
+
+.productosSinTacc{
+    height: 90vh;
+}
+
+.ProductosTradicional{
+    height: 90vh;
+}

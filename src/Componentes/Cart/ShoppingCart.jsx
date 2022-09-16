@@ -1,11 +1,11 @@
 
 import React, { useEffect } from 'react'
-import { TYPES } from './Actions/shoppingActions'
+import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from './shoppingReducer'
 import { useReducer } from 'react'
-import CartItem from './Tienda/CartItem'
+import CartItem from './CartItem'
 import axios from "axios"
-import Header from './Header'
+import Header from '../Header'
 
 
 const ShoppingCart = () => {
