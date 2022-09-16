@@ -3,19 +3,15 @@ import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
 import ElementoTienda from './ElementoTienda'
-import Contacto from "../Contacto";
-import Header from '../Header';
+import Header from '../Header/Header';
 import "../styles/Tienda.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CartItem from '../Tienda/CartItem'
 import axios from "axios"
 
 
 const Tienda = () => {
-
-
 
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
@@ -24,8 +20,8 @@ const Tienda = () => {
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
         const cartURL = "http://localhost:5000/cart";
-        const resProducts = await axios.get(productsURL),
-            resCart = await axios.get(cartURL);
+        const resProducts = await axios.get(productsURL);
+        const resCart = await axios.get(cartURL);
         const newProduct = await resProducts.data
         const newCartItem = await resCart.data
 
@@ -35,10 +31,8 @@ const Tienda = () => {
         updateState();
     }, [])
 
-
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
-  
     const crudCart = async (data) => {
         addToCart(data.id)
 
@@ -48,20 +42,21 @@ const Tienda = () => {
             data: JSON.stringify(cartUpdate)
         };
 
-        let res = await axios(endpoint, options).catch(error=>console.log(error, 'error'))
+        let res = await axios(endpoint, options).catch(error => console.log(error, 'error'))
         console.log(endpoint)
         console.log(options);
+        console.log(res)
     }
 
-    let cartItemQuantity = 0;    
-    cart.map (item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+    let cartItemQuantity = 0;
+    cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
     console.log(cartItemQuantity);
 
     return (
         <>
             <div  >
-                <Header cartItemQuantity = {cartItemQuantity}/>
-            </div><hr/><hr/><hr/><hr/><hr/>
+                <Header cartItemQuantity={cartItemQuantity} />
+            </div><hr /><hr /><hr /><hr /><hr />
             <Container>
                 <h1 id='TiendaSinTACC'>Tienda Sin TACC</h1>
                 <Row>

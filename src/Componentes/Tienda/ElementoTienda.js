@@ -15,7 +15,7 @@ function TiendaSinTACC({ data, crudCart }) {
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">{description}</p>
-                        <h5>${price}</h5>
+                        <h5 className='precioProducto'>${price}</h5>
                         <button className='myButton' onClick={() => crudCart(data)} >Agregar</button>
                     </div>
                 </div>

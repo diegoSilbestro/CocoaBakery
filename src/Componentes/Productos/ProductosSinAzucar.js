@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/ProductosSinAzucar.css';
 import styles from '../styles/Productos.css';
 import Carousel from 'react-bootstrap/Carousel';
 
