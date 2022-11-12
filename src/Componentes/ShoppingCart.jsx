@@ -11,7 +11,7 @@ import './styles/ShoppingCart.css'
 const ShoppingCart = () => {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { cart, method, endpoint, cartUpdate } = state;
+    const { cart, cartUpdate } = state;
 
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
@@ -30,21 +30,8 @@ const ShoppingCart = () => {
     const deleteFromCart = async (id, all = false) => {
         if (all) {
             dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
-            let options = {
-                method: method,
-                headers: { "content-type": "application/json" }
-            };
-
-            await axios(endpoint, options)
         } else {
             dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
-            let options = {
-                method: method,
-                headers: { "content-type": "application/json" },
-                data: JSON.stringify(cartUpdate)
-            };
-
-            let res = await axios(endpoint, options)
         }
     }
 
@@ -65,7 +52,6 @@ const ShoppingCart = () => {
 
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
-    console.log(cartItemQuantity);
 
     return (
         <>

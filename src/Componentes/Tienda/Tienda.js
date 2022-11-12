@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
@@ -15,7 +15,7 @@ const Tienda = () => {
 
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { productos, cart, method, endpoint, cartUpdate } = state;
+    const { productos, cart} = state;
 
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
@@ -29,28 +29,13 @@ const Tienda = () => {
     }
     useEffect(() => {
         updateState();
-    }, [])
+    }, [cart])
 
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
-    const crudCart = async (data) => {
-        addToCart(data.id)
-
-        let options = {
-            method: method,
-            headers: { "content-type": "application/json" },
-            data: JSON.stringify(cartUpdate)
-        };
-
-        let res = await axios(endpoint, options).catch(error => console.log(error, 'error'))
-        console.log(endpoint)
-        console.log(options);
-        console.log(res)
-    }
-
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
-    console.log(cartItemQuantity);
+    
 
     return (
         <>
@@ -66,7 +51,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
+                                            <ElementoTienda key={productos.id} data={productos} addToCart={addToCart} />
                                         </Col>
                                     </>
                                 )
@@ -82,7 +67,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
+                                            <ElementoTienda key={productos.id} data={productos} addToCart={addToCart} />
                                         </Col>
                                     </>
                                 )
@@ -98,7 +83,7 @@ const Tienda = () => {
                                 return (
                                     <>
                                         <Col lg={4} md={6} sm={12}>
-                                            <ElementoTienda key={productos.id} data={productos} crudCart={crudCart} />
+                                            <ElementoTienda key={productos.id} data={productos} addToCart={addToCart} />
                                         </Col>
                                     </>
                                 )

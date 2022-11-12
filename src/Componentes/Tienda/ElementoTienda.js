@@ -3,9 +3,9 @@ import React from 'react';
 import '../styles/Tienda-productos.css'
 
 
-function TiendaSinTACC({ data, crudCart }) {
+function TiendaSinTACC({ data, addToCart }) {
 
-    const {name, price, description, img } = data;
+    const {name, price, description, img, id } = data;
 
     return (
         <div>
@@ -16,7 +16,7 @@ function TiendaSinTACC({ data, crudCart }) {
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">{description}</p>
                         <h5 className='precioProducto'>${price}</h5>
-                        <button className='myButton' onClick={() => crudCart(data)} >Agregar</button>
+                        <button className='myButton' onClick={() => addToCart(id)} >Agregar</button>
                     </div>
                 </div>
             </div>

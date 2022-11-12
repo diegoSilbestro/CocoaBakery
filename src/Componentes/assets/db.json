@@ -80,7 +80,7 @@
       "img": "https://www.196flavors.com/wp-content/uploads/2019/07/macaron-1-FP.jpg"
     },
     {
-      " id": 11,
+      "id": 11,
       "name": "Chocotorta",
       "price": 600,
       "category": "Tradicional",
@@ -96,5 +96,24 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/VariedadDeFacturas2.jpg"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 7,
+      "name": "Carrot Cake",
+      "price": 600,
+      "category": "Sin Azúcar",
+      "description": "Es un pastel con masa de Zanahoria y nueces, relleno de crema de queso.",
+      "img": "https://www.elinasaiach.com/wp-content/uploads/2022/01/CarrotCortada-8-10-scaled.jpg",
+      "cantidad": 2
+    },
+    {
+      "id": 8,
+      "name": "Devil Cake",
+      "price": 650,
+      "category": "Sin Azúcar",
+      "description": "Es una torta Tierna, húmeda y cubierta con crema de chocolate.",
+      "img": "https://pepacooks.com/wp-content/uploads/2014/06/Devil-Food-Cake-14.jpg",
+      "cantidad": 2
+    }
+  ]
 }
