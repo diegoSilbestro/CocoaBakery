@@ -42,12 +42,6 @@ const Tienda = () => {
             headers: { "content-type": "application/json" },
             data: JSON.stringify(cartUpdate)
         };
-<<<<<<< HEAD
-        console.log(options);
-        await console.log(endpoint);
-
-        await axios(endpoint, options)
-    }
 
     let cartItemQuantity = 0;    
     cart.map (item => (cartItemQuantity = item.cantidad + cartItemQuantity));
