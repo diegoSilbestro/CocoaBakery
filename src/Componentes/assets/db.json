@@ -80,7 +80,7 @@
       "img": "https://www.196flavors.com/wp-content/uploads/2019/07/macaron-1-FP.jpg"
     },
     {
-      " id": 11,
+      "id": 11,
       "name": "Chocotorta",
       "price": 600,
       "category": "Tradicional",
@@ -96,33 +96,24 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/VariedadDeFacturas2.jpg"
     }
   ],
-<<<<<<< HEAD
-  "category": [
-    {
-      "id": 1,
-      "category": "Sin TACC"
-    },
-    {
-      "id": 2,
-      "category": "Sin Azúcar"
-    },
-    {
-      "id": 3,
-      "category": "Tradicional"
-    }
-  ],
   "cart": [
     {
-      "id": 4,
-      "name": "Cheescake",
-      "price": 450,
-      "category": "Sin TACC",
-      "description": "Chesscake es un postre hecho a base de ciertos ingredientes",
-      "img": "https://t2.uc.ltmcdn.com/es/posts/3/2/5/como_hacer_cheesecake_sin_horno_32523_600.jpg",
-      "cantidad": 1
+      "id": 7,
+      "name": "Carrot Cake",
+      "price": 600,
+      "category": "Sin Azúcar",
+      "description": "Es un pastel con masa de Zanahoria y nueces, relleno de crema de queso.",
+      "img": "https://www.elinasaiach.com/wp-content/uploads/2022/01/CarrotCortada-8-10-scaled.jpg",
+      "cantidad": 2
+    },
+    {
+      "id": 8,
+      "name": "Devil Cake",
+      "price": 650,
+      "category": "Sin Azúcar",
+      "description": "Es una torta Tierna, húmeda y cubierta con crema de chocolate.",
+      "img": "https://pepacooks.com/wp-content/uploads/2014/06/Devil-Food-Cake-14.jpg",
+      "cantidad": 2
     }
   ]
-=======
-  "cart": []
->>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403
 }
