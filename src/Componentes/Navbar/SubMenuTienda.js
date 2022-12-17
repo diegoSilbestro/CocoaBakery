@@ -6,10 +6,6 @@ import MenuItem from '@mui/material/MenuItem';
 import { HashLink } from 'react-router-hash-link';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CakeIcon from '@mui/icons-material/Cake';
-<<<<<<< HEAD
-=======
-
->>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403
 
 
 

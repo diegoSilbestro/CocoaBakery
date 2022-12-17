@@ -23,8 +23,6 @@ export function shoppingReducer(state, action) {
       }
     }
 
-
-
     case TYPES.ADD_TO_CART: {
       let newItem = state.productos.find(productos => productos.id === action.payload)
 
@@ -140,6 +138,18 @@ export function shoppingReducer(state, action) {
     }
 
     case TYPES.CLEAN_CART: {
+      state.cart.map(item => {
+        endpoint = `http://localhost:5000/cart/${item.id}`;
+        options = {
+          method: "DELETE",
+          headers: { "content-type": "application/json" }
+          }
+        const cleanCart = async () => {await axios (endpoint, options)}
+        cleanCart ();
+      })
+
+      
+
       return {
         ...state,
         cart: [],

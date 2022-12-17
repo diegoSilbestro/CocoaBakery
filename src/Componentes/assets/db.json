@@ -96,24 +96,5 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/VariedadDeFacturas2.jpg"
     }
   ],
-  "cart": [
-    {
-      "id": 1,
-      "name": "Brownie",
-      "price": 400,
-      "category": "Sin TACC",
-      "description": "Bizcocho de chocolate denso, húmedo y cremoso en el interior, con cubierta quebradiza.",
-      "img": "https://www.recetasderechupete.com/wp-content/uploads/2019/11/Brownie.jpg",
-      "cantidad": 2
-    },
-    {
-      "id": 2,
-      "name": "Lemon pie",
-      "price": 600,
-      "category": "Sin TACC",
-      "description": "Es una tarta con base de masa quebrada, rellena con lemon curd y cubierta de merengue.",
-      "img": "https://www.pequerecetas.com/wp-content/uploads/2021/07/lemon-pie-receta-tarta-de-limon-y-merengue.jpg",
-      "cantidad": 2
-    }
-  ]
+  "cart": []
 }

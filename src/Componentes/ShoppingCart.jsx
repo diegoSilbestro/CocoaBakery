@@ -32,13 +32,6 @@ const ShoppingCart = () => {
             dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
         } else {
             dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
-            let options = {
-                method: method,
-                headers: { "content-type": "application/json" },
-                data: JSON.stringify(cartUpdate)
-            };
-
-            await axios(endpoint, options)
         }
     }
 
@@ -46,15 +39,15 @@ const ShoppingCart = () => {
 
     const cleanCart = async () => {
         dispatch({ type: TYPES.CLEAN_CART })
-        cart.map(item => {
-            let endpoint = `http://localhost:5000/cart/${item.id}`;
-            let options = {
-                method: "DELETE",
-                headers: { "content-type": "application/json" }
-            };
+        // cart.map(item => {
+        //     let endpoint = `http://localhost:5000/cart/${item.id}`;
+        //     let options = {
+        //         method: "DELETE",
+        //         headers: { "content-type": "application/json" }
+        //     };
 
-            let res = axios(endpoint, options)
-        })
+        //     await axios(endpoint, options)
+        // })
     }
 
     let cartItemQuantity = 0;

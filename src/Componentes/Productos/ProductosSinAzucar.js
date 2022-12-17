@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import '../styles/Productos.css';
-=======
->>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403
 import styles from '../styles/Productos.css';
 import Carousel from 'react-bootstrap/Carousel';
 

@@ -1,6 +1,6 @@
 import React, { useEffect} from 'react'
 import { TYPES } from '../Actions/shoppingActions'
-import { shoppingReducer, shoppingInitialState } from '../Cart/shoppingReducer'
+import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
 import ElementoTienda from './ElementoTienda'
 import Header from '../Header/Header';
@@ -37,17 +37,17 @@ const Tienda = () => {
     const crudCart = async (data) => {
         await addToCart(data.id)
 
-        let  options =  {
-            method:  method,
-            headers: { "content-type": "application/json" },
-            data: JSON.stringify(cartUpdate)
-        };
+        // let  options =  {
+        //     method:  method,
+        //     headers: { "content-type": "application/json" },
+        //     data: JSON.stringify(cartUpdate)
+        // };
 
 
-        let res = await axios(endpoint, options).catch(error => console.log(error, 'error'))
-        console.log(endpoint)
-        console.log(options);
-        console.log(res)
+        // let res = await axios(endpoint, options).catch(error => console.log(error, 'error'))
+        // console.log(endpoint)
+        // console.log(options);
+        // console.log(res)
     }
 
     let cartItemQuantity = 0;
