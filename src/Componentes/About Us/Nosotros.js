@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Logo from '../../img/LogoCocoaBakery.jpg'
 import Style from '../styles/Nosotros.css'
 

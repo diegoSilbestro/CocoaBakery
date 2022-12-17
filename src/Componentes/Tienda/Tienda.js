@@ -1,6 +1,6 @@
 import React, { useEffect} from 'react'
 import { TYPES } from '../Actions/shoppingActions'
-import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
+import { shoppingReducer, shoppingInitialState } from '../Cart/shoppingReducer'
 import { useReducer } from 'react'
 import ElementoTienda from './ElementoTienda'
 import Header from '../Header/Header';
@@ -33,9 +33,26 @@ const Tienda = () => {
 
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
+
+    const crudCart = async (data) => {
+        await addToCart(data.id)
+
+        let  options =  {
+            method:  method,
+            headers: { "content-type": "application/json" },
+            data: JSON.stringify(cartUpdate)
+        };
+
+
+        let res = await axios(endpoint, options).catch(error => console.log(error, 'error'))
+        console.log(endpoint)
+        console.log(options);
+        console.log(res)
+    }
+
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
-    
+    console.log(cartItemQuantity);
 
     return (
         <>

@@ -53,7 +53,7 @@ export function shoppingReducer(state, action) {
       updateCart ();
 
       return itemInCart
-
+        
         ? {
           ...state,
           cart: state.cart.map(item =>
