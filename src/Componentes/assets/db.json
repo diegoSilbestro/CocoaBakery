@@ -98,21 +98,21 @@
   ],
   "cart": [
     {
-      "id": 7,
-      "name": "Carrot Cake",
-      "price": 600,
-      "category": "Sin Azúcar",
-      "description": "Es un pastel con masa de Zanahoria y nueces, relleno de crema de queso.",
-      "img": "https://www.elinasaiach.com/wp-content/uploads/2022/01/CarrotCortada-8-10-scaled.jpg",
+      "id": 1,
+      "name": "Brownie",
+      "price": 400,
+      "category": "Sin TACC",
+      "description": "Bizcocho de chocolate denso, húmedo y cremoso en el interior, con cubierta quebradiza.",
+      "img": "https://www.recetasderechupete.com/wp-content/uploads/2019/11/Brownie.jpg",
       "cantidad": 2
     },
     {
-      "id": 8,
-      "name": "Devil Cake",
-      "price": 650,
-      "category": "Sin Azúcar",
-      "description": "Es una torta Tierna, húmeda y cubierta con crema de chocolate.",
-      "img": "https://pepacooks.com/wp-content/uploads/2014/06/Devil-Food-Cake-14.jpg",
+      "id": 2,
+      "name": "Lemon pie",
+      "price": 600,
+      "category": "Sin TACC",
+      "description": "Es una tarta con base de masa quebrada, rellena con lemon curd y cubierta de merengue.",
+      "img": "https://www.pequerecetas.com/wp-content/uploads/2021/07/lemon-pie-receta-tarta-de-limon-y-merengue.jpg",
       "cantidad": 2
     }
   ]
