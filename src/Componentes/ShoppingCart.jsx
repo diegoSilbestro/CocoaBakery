@@ -4,12 +4,8 @@ import { shoppingReducer, shoppingInitialState } from './shoppingReducer'
 import { useReducer } from 'react'
 import CartItem from './Cart/CartItem'
 import axios from "axios"
-<<<<<<< HEAD:src/Componentes/Cart/ShoppingCart.jsx
-import Header from '../Header/Header'
-=======
 import Header from './Header/Header'
 import './styles/ShoppingCart.css'
->>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403:src/Componentes/ShoppingCart.jsx
 
 
 const ShoppingCart = () => {
@@ -36,7 +32,6 @@ const ShoppingCart = () => {
             dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
         } else {
             dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
-<<<<<<< HEAD
             let options = {
                 method: method,
                 headers: { "content-type": "application/json" },
@@ -44,39 +39,23 @@ const ShoppingCart = () => {
             };
 
             await axios(endpoint, options)
-=======
->>>>>>> main
         }
     }
 
 
 
-<<<<<<< HEAD:src/Componentes/Cart/ShoppingCart.jsx
-    const cleanCart = () =>{
-        dispatch({ type: TYPES.CLEAN_CART })
-         cart.map (async item => {
-=======
     const cleanCart = async () => {
         dispatch({ type: TYPES.CLEAN_CART })
         cart.map(item => {
->>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403:src/Componentes/ShoppingCart.jsx
             let endpoint = `http://localhost:5000/cart/${item.id}`;
             let options = {
                 method: "DELETE",
                 headers: { "content-type": "application/json" }
             };
-<<<<<<< HEAD:src/Componentes/Cart/ShoppingCart.jsx
-    
-             await axios(endpoint, options)
-        })
-        
-    } 
-=======
 
             let res = axios(endpoint, options)
         })
     }
->>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403:src/Componentes/ShoppingCart.jsx
 
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));

@@ -33,7 +33,7 @@ const Tienda = () => {
 
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
-<<<<<<< HEAD
+
     const crudCart = async (data) => {
         await addToCart(data.id)
 
@@ -43,9 +43,6 @@ const Tienda = () => {
             data: JSON.stringify(cartUpdate)
         };
 
-    let cartItemQuantity = 0;    
-    cart.map (item => (cartItemQuantity = item.cantidad + cartItemQuantity));
-=======
 
         let res = await axios(endpoint, options).catch(error => console.log(error, 'error'))
         console.log(endpoint)
@@ -56,12 +53,6 @@ const Tienda = () => {
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
     console.log(cartItemQuantity);
->>>>>>> 87c4cf5821b5879d4e1952db3e23165207887403
-=======
-    let cartItemQuantity = 0;
-    cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
-    
->>>>>>> main
 
     return (
         <>

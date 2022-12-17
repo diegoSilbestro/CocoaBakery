@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import Rutas from './Componentes/Navbar/Rutas'
+import Rutas from './Componentes/Rutas'
 
 function App() {
   
