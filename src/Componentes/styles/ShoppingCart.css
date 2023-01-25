@@ -1,11 +1,31 @@
-.btnCart {
+.cartContainer{
     display: flex;
     flex-direction: column;
-    margin-left: 550px;
-    margin-bottom: 10px;
-    box-shadow: 0px 10px 14px -7px #ffffff;
-    background: linear-gradient(to bottom, #c38888 5%, #e8baba 100%);
-    background-color: #c38888;
+}
+
+h1 {
+    color: white !important;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.btn-cleanCart  {
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, #a39999 5%, #ce4444 100%);
+    background-color: #ba4646;
     border-radius: 8px;
     display: inline-block;
     cursor: pointer;
@@ -13,28 +33,21 @@
     font-family: Arial;
     font-size: 20px;
     font-weight: bold;
-    padding: 13px 32px;
+    padding: 1rem 2rem;
     text-decoration: none;
     text-shadow: 0px 1px 0px #55a3bd;
     border: none;
 }
-@media screen and (max-width:1060px){
-.btnCart{
-        margin-left: 450px;
+
+@media screen and (max-width:750px) {
+    .btn-cleanCart  {
+        width: 30%;
 }
+} 
+
+@media screen and (max-width:500px) {
+    .btn-cleanCart  {
+        width: 40%;
 }
-@media screen and (max-width:840px) {
-   .btnCart{
-        margin-left: 250px;
-    }
-}
-@media screen and (max-width:740px) {
-   .btnCart {
-        margin-left: 250px;
-    }
-}
-@media screen and (max-width:630px) {
-    .btnCart{
-        margin-left: 200px;
-    }
-}
+    
+} 

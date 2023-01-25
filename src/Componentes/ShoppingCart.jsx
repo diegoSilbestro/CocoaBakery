@@ -11,7 +11,7 @@ import './styles/ShoppingCart.css'
 const ShoppingCart = () => {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { cart, cartUpdate } = state;
+    const { cart } = state;
 
     const updateState = async () => {
         const productsURL = "http://localhost:5000/productos";
@@ -35,38 +35,34 @@ const ShoppingCart = () => {
         }
     }
 
-
-
     const cleanCart = async () => {
         dispatch({ type: TYPES.CLEAN_CART })
-        // cart.map(item => {
-        //     let endpoint = `http://localhost:5000/cart/${item.id}`;
-        //     let options = {
-        //         method: "DELETE",
-        //         headers: { "content-type": "application/json" }
-        //     };
-
-        //     await axios(endpoint, options)
-        // })
     }
 
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
 
+    let visibility = "";
+    if (cartItemQuantity === 0) {
+         visibility = "visible"
+    } else {
+         visibility = "hidden"
+    }
+
     return (
-        <>
+        <div className="box">
             <Header cartItemQuantity={cartItemQuantity} />
-            <hr /><hr /><hr /><hr /><hr />
+            <hr /><hr /><hr />
             <h1>Carrito de Compras</h1>
-            <div className="box">
-                {cart.map((item, index) => (
-                    <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
+            <h2 className={visibility}>Todavía no tenes productos en tu carrito!!!!</h2>
+            {cart.map((item, index) => (
+                <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
 
-                ))}
+            ))}
 
-            </div>
+
             <button className='btn-cleanCart' onClick={cleanCart}>Limpiar Carrito</button>
-        </>
+        </div>
     )
 }
 

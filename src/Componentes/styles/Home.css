@@ -12,11 +12,12 @@ h1{
     width: 100%;
 }
 .carousel-inner{
-    height: 400px;
     background-size: contain;
     width: 100%;
 }
 #img{
-    height: 500px;
     background-size: contain;
+}
+.min-vh-100{
+    min-height: 100%!important
 }

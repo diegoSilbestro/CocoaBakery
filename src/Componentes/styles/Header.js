@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.header`
   z-index: 4;
   top:-1px;
   right:0;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-between;

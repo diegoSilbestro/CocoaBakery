@@ -11,39 +11,23 @@
 }
 
 .container-card2 {
-    height: 600px;
-    margin: 0 auto;
-}
-
-.container-tradicional {
-    margin-top: 50px;
-    margin-bottom: 150px;
-}
-
-.container-sinazucar {
-    margin-top: 50px;
-}
-
-h5 {
-    font-size: 25px;
+    display:flex;
+    flex-direction: column;  
+    align-items: center;
 }
 
 h1 {
     font-weight: bolder;
-    font-size: 35px;
 
 }
 
 .card {
-    max-width: 540px;
+    display: flex;
     border: none;
-    margin-bottom: 800px;
+    width: 60%;
+  
 }
 
-.img-card {
-    width: 485px;
-    height: 180px;
-}
 
 .card-title {
     text-align: center;
@@ -51,184 +35,37 @@ h1 {
     font-weight: bolder;
 }
 
-.card-text li {
-    list-style: none;
-    margin-right: 20px;
-}
-
 .card-body {
-    margin-top: -20px;
-    margin-bottom: -200px;
     text-align: center;
 }
 
-.container-card .card {
-    width: 800px !important;
-    margin: 50px;
-    margin-left: 250px;
-    margin-bottom: -800px;
+.card-text {
+    padding-left: 0;
 }
 
-.container-card .card .img-column {
-    height: 250px;
+.card-text li {
+    list-style: none;
 }
 
-.container-card2 {
-    margin-left: 250px !important;
-}
-
-.container-card2 .card {
-    max-width: 550px !important;
-    height: 300px;
-    margin-left: 150px;
-
-}
-
-.container-card2 .card .img1 {
-    width: 400px;
-    height: 300px;
-}
-
-.container-card2 .card .img2 {
-    width: 400px;
-    height: 300px;
-}
-
-.container-card2 .card .img3 {
-    width: 400px;
-    height: 300px;
-}
-
-
-@media screen and (max-width:1052px) {
-    #ProductosSinAzucar {
-        color: #C38888 !important;
-    }
-
-    #ProductosSinTACC {
-        color: #C38888 !important;
-    }
-
-    #ProductosTradicional {
-        color: #C38888 !important;
-    }
-
-    .container-card2 {
-        margin-left: 240px !important;
-    }
-
-    .container-card2 .card .img1 {
-        width: 100%;
-        height: 300px;
-    }
-
-    .container-card2 .card .img2 {
-        width: 100%;
-        height: 300px;
-    }
-
-    .container-card2 .card .img3 {
-        width: 100%;
-        height: 290px;
-    }
-
-    .card-body {
-        margin-bottom: 10px;
-        text-align: center;
-    }
+.carousel-inner {
+    height: auto !important;
 }
 
 @media screen and (max-width:934px) {
-    #ProductosSinAzucar {
-        color: #C38888 !important;
-        text-align: center;
-    }
-
-    #ProductosSinTACC {
-        color: #C38888 !important;
-        text-align: center;
-    }
-
-    #ProductosTradicional {
-        color: #C38888 !important;
-        text-align: center;
-    }
-
-    .container-card2 {
-        margin-top: 30px;
-        margin-left: 240px !important;
-    }
-
-    .card-body {
-        text-align: center;
+    .card {
+        width: 70%;
     }
 
 }
 
-@media screen and (max-width:892px) {
-    #ProductosSinAzucar {
-        color: #C38888 !important;
-        margin-top: -120px;
-    }
+@media screen and (max-width:680px) {
+    .card {
+        width: 80%;
+    }    
+} 
 
-    #ProductosSinTACC {
-        color: #C38888 !important;
-    }
-
-    #ProductosTradicional {
-        color: #C38888 !important;
-        margin-top: -120px;
-    }
-
-    .container-card {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .container-card2 .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 130px;
-        margin-top: 150px;
-    }
-
-    .card-body {
-        text-align: center;
-    }
-}
-
-@media screen and (max-width:630px) {
-
-    #ProductosSinAzucar {
-        color: #C38888 !important;
-        margin-top: -150px !important;
-
-    }
-
-    #ProductosSinTACC {
-        color: #C38888 !important;
-        margin-bottom: -200px;
-    }
-
-    #ProductosTradicional {
-        color: #C38888 !important;
-        margin-top: -150px;
-    }
-
-    .container-card2 .card .img1 {
-        width: 533px;
-        height: 300px;
-    }
-
-    .container-card2 .card .img2 {
-        width: 533px;
-        height: 300px;
-    }
-
-    .container-card2 .card .img3 {
-        width: 533px;
-        height: 300px;
-    }
-}
+@media screen and (max-width:500px) {
+    .card {
+        width: 95%;
+    }    
+} 

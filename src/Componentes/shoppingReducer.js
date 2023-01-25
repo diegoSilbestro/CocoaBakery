@@ -146,6 +146,7 @@ export function shoppingReducer(state, action) {
           }
         const cleanCart = async () => {await axios (endpoint, options)}
         cleanCart ();
+        return null;
       })
 
       

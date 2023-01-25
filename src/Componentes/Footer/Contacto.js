@@ -1,8 +1,5 @@
 import React from 'react'
 import style from '../styles/Contacto.css'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 
 function Contacto() {
@@ -25,13 +22,13 @@ function Contacto() {
             <div id='contacto' style={style}>
                <form className='w-100'>
                   <div className="row mb-3">
-                     <label for="inputEmail3" className="col-sm-2 col-form-label">Nombre</label>
+                     <label for="inputName3" className="col-sm-2 col-form-label">Nombre</label>
                      <div className="col-sm-10">
                         <input type="text" className="form-control" id="inputName3" />
                      </div>
                   </div>
                   <div className="row mb-3">
-                     <label for="inputEmail3" className="col-sm-2 col-form-label">Apellido</label>
+                     <label for="inputApellido3" className="col-sm-2 col-form-label">Apellido</label>
                      <div className="col-sm-10">
                         <input type="text" className="form-control" id="inputApellido3" />
                      </div>
@@ -45,9 +42,9 @@ function Contacto() {
                   <div className="row mb-3">
                      <div className="col-sm-10 offset-sm-2">
                         <div className="form-check">
-                           <div className='formulario-label'>Comentarios</div>
+                           <div className='col-sm-2 col-form-label'>Comentarios</div>
                            <div className='formulario-area'>
-                              <textarea />
+                              <textarea className="form-control"/>
                            </div>
                         </div>
                      </div>

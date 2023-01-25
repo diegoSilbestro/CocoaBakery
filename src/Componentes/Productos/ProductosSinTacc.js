@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Productos.css'
+import '../styles/Productos.css'
 import Carousel from 'react-bootstrap/Carousel';
 
 function productosSinTacc() {
@@ -7,8 +7,8 @@ function productosSinTacc() {
 
         <>
             <h1 className='producto-sinTacc' id='ProductosSinTACC'>Productos sin TACC</h1>
-            <div className='container-card2' style={styles}>
-                <div class="card" >
+            <div className='container-card2'>
+                <div className="card" >
                     <Carousel>
                         <Carousel.Item>
                             <img
