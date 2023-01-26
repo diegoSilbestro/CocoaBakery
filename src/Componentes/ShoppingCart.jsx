@@ -43,11 +43,8 @@ const ShoppingCart = () => {
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
 
     let visibility = "";
-    if (cartItemQuantity === 0) {
-         visibility = "visible"
-    } else {
-         visibility = "hidden"
-    }
+    cartItemQuantity === 0? visibility = "visible" : visibility = "hidden"
+
 
     return (
         <div className="box">
