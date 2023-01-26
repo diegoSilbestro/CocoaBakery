@@ -50,7 +50,7 @@ const ShoppingCart = () => {
         <div className="box">
             <Header cartItemQuantity={cartItemQuantity} />
             <hr /><hr /><hr />
-            <h1>Carrito de Compras</h1>
+            <h1 className='cartTitle'>Carrito de Compras</h1>
             <h2 className={visibility}>Todavía no tenes productos en tu carrito!!!!</h2>
             {cart.map((item, index) => (
                 <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />

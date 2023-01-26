@@ -3,8 +3,8 @@
     flex-direction: column;
 }
 
-h1 {
-    color: white !important;
+.cartTitle{
+    color: rgb(255, 255, 255) !important;
 }
 .box{
     display: flex;

@@ -14,7 +14,7 @@
     margin: 0 auto;
 }
 
-.nosotro-text {
+.nosotros-text {
     font-weight: bolder;
     color: white;
     font-size: 40px;
@@ -25,7 +25,7 @@
 
 .nosotros-text {
 
-    color: white;
+    color: white !important;
     font-size: 30px;
     display: block;
     text-align: center;

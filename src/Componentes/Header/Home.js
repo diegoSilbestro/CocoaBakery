@@ -8,7 +8,7 @@ import styles from '../styles/Home.css'
 const Home = () => {
   return (
     <>
-        <div id='home' style={styles}>
+        <div id='home' style={styles}> 
             <h1>Bienvenido a Cocoa Bakery!</h1>
             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
                 <div className="carousel-indicators">
