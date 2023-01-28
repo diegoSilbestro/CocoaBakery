@@ -68,6 +68,7 @@
       "id": 9,
       "name": "Torta Rogel",
       "price": 600,
+      "category": "Tradicional",
       "description": "Torta en capas de masa casera, dulce de leche y cubierta de merengue italiano.",
       "img": "http://www.encasacookingspace.com/wp-content/uploads/2019/05/Rogel-2.jpg"
     },
@@ -96,5 +97,15 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/VariedadDeFacturas2.jpg"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 2,
+      "name": "Lemon pie",
+      "price": 600,
+      "category": "Sin TACC",
+      "description": "Es una tarta con base de masa quebrada, rellena con lemon curd y cubierta de merengue.",
+      "img": "https://www.pequerecetas.com/wp-content/uploads/2021/07/lemon-pie-receta-tarta-de-limon-y-merengue.jpg",
+      "cantidad": 2
+    }
+  ]
 }
