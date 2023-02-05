@@ -17,14 +17,11 @@ function Inicio() {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
     const { cart } = state;
     const updateState = async () => {
-        const productsURL = "http://localhost:5000/productos";
-        const cartURL = "http://localhost:5000/cart";
-        const resProducts = await axios.get(productsURL);
+        const cartURL = "http://localhost:8080/cart/verItems";
         const resCart = await axios.get(cartURL);
-        const newProduct = await resProducts.data
-        const newCartItem = await resCart.data
+        const newCartItem = await resCart.data.items
 
-        dispatch({ type: TYPES.READ_STATE, payload: [newProduct, newCartItem] })
+        dispatch({ type: TYPES.READ_STATE, payload: [null, newCartItem] })
     }
     useEffect(() => {
         updateState();
@@ -33,7 +30,6 @@ function Inicio() {
 
     let cartItemQuantity = 0;
     cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
-    console.log(cartItemQuantity);
 
     return (
 

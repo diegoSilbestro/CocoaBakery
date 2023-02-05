@@ -11,18 +11,14 @@ import Badge from '@mui/material/Badge';
 import '../styles/navBtn.css'
 import MenuButton from "./MenuButton";
 
-const scrollWithOffset = (el) => {
-  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = -100; 
-  window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-}
+
 
 function Navbar({ open, handleClick, cartItemQuantity }) {
   return (
     <NavbarWrapper open={open} style={{ width: "100%" }}>
       <div className="navContainer" style={{ width: "100%" }}>
 
-        <HashLink smooth to="/#home" scroll={el => scrollWithOffset(el)} className="logo"><img src={require('../../img/LogoCocoaBakery (1).png')} alt=''></img></HashLink>
+        <HashLink smooth to="/#home"  className="logo"><img src={require('../../img/LogoCocoaBakery (1).png')} alt=''></img></HashLink>
         <div className='headerCart' >
 
           <NavLink to="/ShoppingCart">
@@ -38,14 +34,14 @@ function Navbar({ open, handleClick, cartItemQuantity }) {
         </div>
 
         <ul className="nav1" >
-          <li><NavButton titulo={<HashLink smooth to="/#home" scroll={el => scrollWithOffset(el)} className='navBtn' onClick={handleClick}>Inicio</HashLink>} /></li>
+          <li><NavButton titulo={<HashLink smooth to="/#home"  className='navBtn' onClick={handleClick}>Inicio</HashLink>} /></li>
           <li><SubMenuProductos className='navBtn' titulo='Productos' handleCloseHamb={handleClick} /></li>
           <li><SubMenuTienda className='navBtn' titulo='Tienda' handleCloseHamb={handleClick} /></li>
-          <li><NavButton titulo={<HashLink smooth to="/#Contacto" scroll={el => scrollWithOffset(el)} className='navBtn' onClick={handleClick}>Contacto</HashLink>} /></li>
+          <li><NavButton titulo={<HashLink smooth to="/#Contacto"  className='navBtn' onClick={handleClick}>Contacto</HashLink>} /></li>
           <li className='ulCart'>
 
 
-            <NavLink to="/ShoppingCart" scroll={el => scrollWithOffset(el)}>
+            <NavLink to="/ShoppingCart" >
               <IconButton  >
                 <Badge badgeContent={cartItemQuantity} color="primary" >
                   <ShoppingCartIcon fontSize="large" sx={{ color: '#190707' }} />

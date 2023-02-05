@@ -9,7 +9,7 @@ function ProductosTradicional() {
             <div className="container-tradicional">
                 <h1 className="producto-" id='ProductosTradicional'>Productos Tradicionales</h1>
                 <div className='container-card2'>
-                    <div class="card">
+                    <div className="card">
                         <Carousel>
                             <Carousel.Item>
                                 <img
@@ -34,9 +34,9 @@ function ProductosTradicional() {
                             </Carousel.Item>
                         </Carousel>
 
-                        <div class="card-body">
-                            <h5 class="card-title">Tradicionales</h5>
-                            <ul class="card-text">
+                        <div className="card-body">
+                            <h5 className="card-title">Tradicionales</h5>
+                            <ul className="card-text">
                                 <li>Torta Rogel</li>
                                 <li>Macarons</li>
                                 <li>Chocotorta</li>

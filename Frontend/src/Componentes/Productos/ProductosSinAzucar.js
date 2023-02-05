@@ -10,7 +10,7 @@ function ProductosSinAzucar() {
             <div className="container-sinazucar">
                 <h1 className='producto-sinAzucar' id='ProductosSinAzucar'>Productos Sin Azúcar</h1>
                 <div className='container-card2' >
-                    <div class="card">
+                    <div className="card">
                         <Carousel>
                             <Carousel.Item>
                                 <img
@@ -34,9 +34,9 @@ function ProductosSinAzucar() {
                                 />
                             </Carousel.Item>
                         </Carousel>
-                        <div class="card-body">
-                            <h5 class="card-title">Sin Azúcar</h5>
-                            <ul class="card-text">
+                        <div className="card-body">
+                            <h5 className="card-title">Sin Azúcar</h5>
+                            <ul className="card-text">
                                 <li>Mousse de Yogurt </li>
                                 <li>Mousse de chocolate</li>
                                 <li>Carrot cake</li>

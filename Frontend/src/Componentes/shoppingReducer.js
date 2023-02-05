@@ -24,19 +24,19 @@ export function shoppingReducer(state, action) {
     }
 
     case TYPES.ADD_TO_CART: {
-      let newItem = state.productos.find(productos => productos.id === action.payload)
+      let newItem = state.productos.find(productos => productos._id === action.payload)
 
-      let itemInCart = state.cart.find(item => item.id === newItem.id)
+      let itemInCart = state.cart.find(item => item._id === newItem._id)
 
       if (itemInCart){
         method= 'PUT';
-        endpoint= `http://localhost:5000/cart/${itemInCart.id}`;
+        endpoint= `http://localhost:8080/cart/editarItem/${itemInCart._id}`;
         cartUpdate= { ...itemInCart, cantidad: itemInCart.cantidad + 1 }
                    
       }
       else {
         method= 'POST';
-        endpoint= 'http://localhost:5000/cart';
+        endpoint= 'http://localhost:8080/cart/crearItem';
         cartUpdate= { ...newItem, cantidad: 1 }
       }
 
@@ -72,15 +72,15 @@ export function shoppingReducer(state, action) {
 
 
     case TYPES.REMOVE_ONE_PRODUCT: {
-      let itemToDelete = state.cart.find(item => item.id === action.payload)
+      let itemToDelete = state.cart.find(item => item._id === action.payload)
 
       if (itemToDelete.cantidad > 1) {
           method = "PUT";
-          endpoint = `http://localhost:5000/cart/${itemToDelete.id}`;
+          endpoint = `http://localhost:8080/cart/editarItem/${itemToDelete._id}`;
           cartUpdate = { ...itemToDelete, cantidad: itemToDelete.cantidad - 1 };
       } else {
           method = "DELETE";
-          endpoint = `http://localhost:5000/cart/${itemToDelete.id}`;
+          endpoint = `http://localhost:8080/cart/eliminarItem/${itemToDelete._id}`;
       } 
       
       options = {
@@ -99,19 +99,15 @@ export function shoppingReducer(state, action) {
         ? {
           ...state,
           cart: state.cart.map(item =>
-            item.id === action.payload
+            item._id === action.payload
               ? { ...item, cantidad: item.cantidad - 1 }
               : item
           ),
-          method: "PUT",
-          endpoint: `http://localhost:5000/cart/${itemToDelete.id}`,
           cartUpdate: { ...itemToDelete, cantidad: itemToDelete.cantidad - 1 }
         }
         : {
           ...state,
-          cart: state.cart.filter(item => item.id !== action.payload),
-          method: "DELETE",
-          endpoint: `http://localhost:5000/cart/${itemToDelete.id}`
+          cart: state.cart.filter(item => item._id !== action.payload)
         }
 
     }
@@ -124,7 +120,7 @@ export function shoppingReducer(state, action) {
         headers: { "content-type": "application/json" }
       };
 
-      endpoint= `http://localhost:5000/cart/${action.payload}`
+      endpoint= `http://localhost:8080/cart/eliminarItem/${action.payload}`
 
       const updateCart = async () => {await axios (endpoint, options)}
 
@@ -132,14 +128,14 @@ export function shoppingReducer(state, action) {
 
       return {
         ...state,
-        cart: state.cart.filter(item => item.id !== action.payload),
+        cart: state.cart.filter(item => item._id !== action.payload),
         method: "DELETE"
       }
     }
 
     case TYPES.CLEAN_CART: {
       state.cart.map(item => {
-        endpoint = `http://localhost:5000/cart/${item.id}`;
+        endpoint = `http://localhost:8080/cart/eliminarItem/${item._id}`;
         options = {
           method: "DELETE",
           headers: { "content-type": "application/json" }

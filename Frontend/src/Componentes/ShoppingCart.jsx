@@ -14,12 +14,12 @@ const ShoppingCart = () => {
     const { cart } = state;
 
     const updateState = async () => {
-        const productsURL = "http://localhost:5000/productos";
-        const cartURL = "http://localhost:5000/cart";
+        const productsURL = "http://localhost:8080/products/verProductos";
+        const cartURL = "http://localhost:8080/cart/verItems";
         const resProducts = await axios.get(productsURL),
             resCart = await axios.get(cartURL);
-        const newProduct = await resProducts.data
-        const newCartItem = await resCart.data
+        const newProduct = await resProducts.data.products;
+        const newCartItem = await resCart.data.items;
 
         dispatch({ type: TYPES.READ_STATE, payload: [newProduct, newCartItem] })
     }
