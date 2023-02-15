@@ -19,13 +19,13 @@ const Tienda = () => {
 
     const updateState = async () => {
         
-        const productsURL = "http://localhost:8080/products/verProductos";
-        const cartURL = "http://localhost:8080/cart/verItems";
+        const productsURL = "https://encouraging-calico-governor.glitch.me/products/verProductos";
+        const cartURL = "https://encouraging-calico-governor.glitch.me/cart/verItems";
         const resProducts = await axios.get(productsURL);
         const resCart = await axios.get(cartURL);
         const newProduct = await resProducts.data.products;
         const newCartItem = await resCart.data.items;
-        
+        console.log(newProduct);
 
         dispatch({ type: TYPES.READ_STATE, payload: [newProduct, newCartItem] })
     }

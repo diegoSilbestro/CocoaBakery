@@ -30,13 +30,13 @@ export function shoppingReducer(state, action) {
 
       if (itemInCart){
         method= 'PUT';
-        endpoint= `http://localhost:8080/cart/editarItem/${itemInCart._id}`;
+        endpoint= `https://encouraging-calico-governor.glitch.me/cart/editarItem/${itemInCart._id}`;
         cartUpdate= { ...itemInCart, cantidad: itemInCart.cantidad + 1 }
                    
       }
       else {
         method= 'POST';
-        endpoint= 'http://localhost:8080/cart/crearItem';
+        endpoint= 'https://encouraging-calico-governor.glitch.me/cart/crearItem';
         cartUpdate= { ...newItem, cantidad: 1 }
       }
 
@@ -76,11 +76,11 @@ export function shoppingReducer(state, action) {
 
       if (itemToDelete.cantidad > 1) {
           method = "PUT";
-          endpoint = `http://localhost:8080/cart/editarItem/${itemToDelete._id}`;
+          endpoint = `https://encouraging-calico-governor.glitch.me/cart/editarItem/${itemToDelete._id}`;
           cartUpdate = { ...itemToDelete, cantidad: itemToDelete.cantidad - 1 };
       } else {
           method = "DELETE";
-          endpoint = `http://localhost:8080/cart/eliminarItem/${itemToDelete._id}`;
+          endpoint = `https://encouraging-calico-governor.glitch.me/cart/eliminarItem/${itemToDelete._id}`;
       } 
       
       options = {
@@ -120,7 +120,7 @@ export function shoppingReducer(state, action) {
         headers: { "content-type": "application/json" }
       };
 
-      endpoint= `http://localhost:8080/cart/eliminarItem/${action.payload}`
+      endpoint= `https://encouraging-calico-governor.glitch.me/cart/eliminarItem/${action.payload}`
 
       const updateCart = async () => {await axios (endpoint, options)}
 
@@ -135,7 +135,7 @@ export function shoppingReducer(state, action) {
 
     case TYPES.CLEAN_CART: {
       state.cart.map(item => {
-        endpoint = `http://localhost:8080/cart/eliminarItem/${item._id}`;
+        endpoint = `https://encouraging-calico-governor.glitch.me/cart/eliminarTodos`;
         options = {
           method: "DELETE",
           headers: { "content-type": "application/json" }

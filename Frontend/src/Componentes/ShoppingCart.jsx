@@ -14,8 +14,8 @@ const ShoppingCart = () => {
     const { cart } = state;
 
     const updateState = async () => {
-        const productsURL = "http://localhost:8080/products/verProductos";
-        const cartURL = "http://localhost:8080/cart/verItems";
+        const productsURL = "https://encouraging-calico-governor.glitch.me/products/verProductos";
+        const cartURL = "https://encouraging-calico-governor.glitch.me/cart/verItems";
         const resProducts = await axios.get(productsURL),
             resCart = await axios.get(cartURL);
         const newProduct = await resProducts.data.products;
