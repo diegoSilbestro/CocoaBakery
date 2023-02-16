@@ -17,7 +17,7 @@ function Inicio() {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
     const { cart } = state;
     const updateState = async () => {
-        const cartURL = "http://localhost:8080/cart/verItems";
+        const cartURL = "https://encouraging-calico-governor.glitch.me/cart/verItems";
         const resCart = await axios.get(cartURL);
         const newCartItem = await resCart.data.items
 
