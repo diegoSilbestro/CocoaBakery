@@ -43,7 +43,7 @@ function Navbar({ open, handleClick, cartItemQuantity }) {
 
             <NavLink to="/ShoppingCart" >
               <IconButton  >
-                <Badge badgeContent={cartItemQuantity} color="primary" >
+                <Badge badgeContent={cartItemQuantity}>
                   <ShoppingCartIcon fontSize="large" sx={{ color: '#190707' }} />
                 </Badge>
               </IconButton>
