@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 import { TYPES } from '../Actions/shoppingActions'
 import { shoppingReducer, shoppingInitialState } from '../shoppingReducer'
 import { useReducer } from 'react'
@@ -15,10 +15,10 @@ const Tienda = () => {
 
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
-    const { productos, cart} = state;
+    const { productos, cart } = state;
 
     const updateState = async () => {
-        
+
         const productsURL = "https://encouraging-calico-governor.glitch.me/products/verProductos";
         const cartURL = "https://encouraging-calico-governor.glitch.me/cart/verItems";
         const resProducts = await axios.get(productsURL);
@@ -35,13 +35,32 @@ const Tienda = () => {
 
     const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
-    let cartItemQuantity = 0;
-    cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+    //let cartItemQuantity = 0;
+    // cart.map(item => (cartItemQuantity = item.cantidad + cartItemQuantity));
+
+    const [cartItemQuantity, setCartItemQuantity] = useState(0);
+    useEffect(() => {
+        // Variable de suma
+        let sumaCantidad = 0;
+
+        // Bucle para recorrer todos los elementos del array
+        for (let i = 0; i < cart.length; i++) {
+            // Comprobar si el elemento tiene la propiedad "cantidad"
+            if (cart[i].cantidad !== undefined) {
+                // Sumar el valor de la propiedad "cantidad" a la variable de suma
+                sumaCantidad += cart[i].cantidad;
+            }
+        }
+
+        // Mostrar la suma de las cantidades
+        console.log("La suma de las cantidades es: " + sumaCantidad);
+        setCartItemQuantity(sumaCantidad)
+    }, [cart])
 
     const generateKey = (pre) => {
-        return `${ pre }_${ new Date().getTime() }`;
+        return `${pre}_${new Date().getTime()}`;
     }
-    
+
 
     return (
         <>

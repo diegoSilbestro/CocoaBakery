@@ -55,7 +55,7 @@ export function shoppingReducer(state, action) {
         ? {
           ...state,
           cart: state.cart.map(item =>
-            item.id === newItem.id
+            item._id === newItem._id
               ? { ...item, cantidad: item.cantidad + 1 }
               : { ...item }
           ),
